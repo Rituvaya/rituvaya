@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RITUVAYA | Connecting Possibilities Worldwide</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #12304a;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1261a0;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #63b85c;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #12304a;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #1261a0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #eef8ff, #f2fff1);
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #1261a0;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #63b85c;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #12304a;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            color: #4d6475;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #1261a0;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0d4c7d;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 40px;
+            color: #1261a0;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #526575;
+        }
+
+        .services {
+            background: #f8fbfd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #1261a0;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #617381;
+        }
+
+        .how {
+            text-align: center;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            padding: 20px;
+            background: #f2fff1;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .contact {
+            background: #1261a0;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #092d47;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">RITU<span>VAYA</span></div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>RITU<span>VAYA</span> 🌍</h1>
+
+        <h2>Connecting Possibilities Worldwide.</h2>
+
+        <p>
+            We connect businesses with suitable manufacturers,
+            suppliers, service providers, business partners and
+            opportunities across India and international markets.
+        </p>
+
+        <a href="#contact" class="button">Start a Business Enquiry</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Who We Are</h2>
+
+        <div class="about">
+            <p>
+                RITUVAYA is a business connection and sourcing platform
+                focused on helping businesses find the right products,
+                suppliers, services, partners and opportunities.
+            </p>
+
+            <br>
+
+            <p>
+                Our goal is simple:
+                <strong>Right Requirement → Right Connection → Right Opportunity.</strong>
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+
+        <h2 class="section-title">What We Do</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌍 Global & Domestic Sourcing</h3>
+                <p>
+                    Helping businesses find suitable products,
+                    manufacturers and suppliers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Supplier Connections</h3>
+                <p>
+                    Connecting buyers with suitable manufacturers,
+                    suppliers and distributors.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💼 B2B Opportunities</h3>
+                <p>
+                    Connecting businesses with potential partners
+                    and business opportunities.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ Technical Services</h3>
+                <p>
+                    Connecting companies with technical and
+                    professional service providers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔎 Requirement Matching</h3>
+                <p>
+                    Understanding business requirements and
+                    finding suitable connections.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Business Growth</h3>
+                <p>
+                    Helping businesses discover new markets,
+                    connections and opportunities.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="how">
+
+        <h2 class="section-title">How RITUVAYA Works</h2>
+
+        <div class="steps">
+
+            <div class="step">1️⃣ Share Requirement</div>
+            <div class="step">2️⃣ Understand</div>
+            <div class="step">3️⃣ Find Connections</div>
+            <div class="step">4️⃣ Connect</div>
+            <div class="step">5️⃣ Follow Up</div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>Have a business requirement?</p>
+
+        <p>
+            Tell us what you need and we'll help you find
+            the right connection.
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
+           class="button">
+            Business Enquiry
+        </a>
+
+        <br><br>
+
+        <p>📧 rituvaya.connect@gmail.com</p>
+
+    </section>
+
+    <footer>
+        <p>© 2026 RITUVAYA. All Rights Reserved.</p>
+        <p>Connecting Possibilities Worldwide. 🌍</p>
+    </footer>
+
+</body>
+</html>
