@@ -1,771 +1,1304 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>RITUVAYA | Connecting Possibilities Worldwide</title>
-
-    <meta name="description"
-        content="RITUVAYA connects businesses with suitable manufacturers, suppliers, service providers, business partners and opportunities across India and international markets.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #12304a;
-            line-height: 1.6;
-        }
-
-        /* HEADER */
-
-        header {
-            background: #ffffff;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e5e5e5;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #1261a0;
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: #63b85c;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #12304a;
-            margin-left: 25px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #1261a0;
-        }
-
-        /* HERO */
-
-        .hero {
-            background: linear-gradient(135deg, #eef8ff, #f2fff1);
-            padding: 120px 8%;
-            text-align: center;
-            min-height: 520px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            color: #1261a0;
-            margin-bottom: 18px;
-            letter-spacing: 1px;
-            font-weight: 800;
-        }
-
-        .hero h1 span {
-            color: #63b85c;
-        }
-
-        .hero h2 {
-            font-size: 27px;
-            margin-bottom: 22px;
-            color: #12304a;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-        }
-
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 19px;
-            color: #4d6475;
-            line-height: 1.8;
-        }
-
-        /* BUTTON */
-
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 30px;
-            background: #1261a0;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background: #0d4c7d;
-            transform: translateY(-2px);
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 40px;
-            color: #1261a0;
-        }
-
-        /* ABOUT */
-
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 18px;
-            color: #526575;
-        }
-
-        /* SERVICES */
-
-        .services {
-            background: #f8fbfd;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 35px 28px;
-            border-radius: 16px;
-            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: 0.3s ease;
-            border: 1px solid #e8eef2;
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .card h3 {
-            color: #1261a0;
-            margin-bottom: 14px;
-            font-size: 21px;
-            line-height: 1.4;
-            font-weight: 700;
-        }
-
-        .card p {
-            color: #617381;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-top: 5px;
-        }
-
-        /* WHO WE WORK WITH */
-
-        .partners {
-            background: #f2faff;
-        }
-
-        /* WHY RITUVAYA */
-
-        .why {
-            background: #ffffff;
-        }
-
-        /* HOW IT WORKS */
-
-        .how {
-            text-align: center;
-            background: #f8fbfd;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-        }
-
-        .step {
-            padding: 25px 15px;
-            background: #f8fff7;
-            border-radius: 14px;
-            font-weight: bold;
-            color: #12304a;
-            border: 1px solid #dcefd8;
-            transition: 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .step:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        /* CONTACT */
-
-        .contact {
-            background: linear-gradient(135deg, #1261a0, #0d4c7d);
-            color: white;
-            text-align: center;
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
-
-        .contact .section-title {
-            color: white;
-        }
-
-        .contact p {
-            font-size: 18px;
-            margin-bottom: 12px;
-            line-height: 1.7;
-        }
-
-        .contact .button {
-            background: white;
-            color: #1261a0;
-        }
-
-        .contact .button:hover {
-            background: #f2fff1;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #092d47;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 768px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 16px 5%;
-            }
-
-            nav {
-                text-align: center;
-            }
-
-            nav a {
-                margin: 0 8px;
-                font-size: 14px;
-            }
-
-            .hero {
-                padding: 70px 6%;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero h2 {
-                font-size: 21px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 55px 6%;
-            }
-
-            .section-title {
-                font-size: 29px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
-                grid-template-columns: 1fr;
-            }
-
-            .button {
-                padding: 13px 24px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RITUVAYA — Connecting Possibilities Worldwide</title>
+
+<meta name="description" content="RITUVAYA connects businesses with manufacturers, suppliers, service providers and opportunities across India and international markets.">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #1f2937;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: #0b2d5c;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #667085;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1261a0;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #42a85f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #344054;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1261a0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(66,168,95,0.20), transparent 30%),
+        radial-gradient(circle at 15% 80%, rgba(18,97,160,0.18), transparent 35%),
+        linear-gradient(135deg, #f5fbff, #ffffff);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(18,97,160,0.08);
+    color: #1261a0;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeDown 1s ease forwards;
+}
+
+.hero h1 {
+    font-size: clamp(46px, 9vw, 82px);
+    color: #0b2d5c;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    animation: heroTitle 1s ease forwards;
+}
+
+.hero h1 span {
+    color: #42a85f;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 4vw, 30px);
+    color: #1261a0;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #667085;
+    max-width: 700px;
+    margin: auto auto 30px;
+    animation: fadeUp 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1261a0, #0b2d5c);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(18,97,160,0.25);
+    transition: 0.3s;
+    animation: fadeUp 1s ease 0.9s forwards;
+    opacity: 0;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(18,97,160,0.35);
+}
+
+
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.45;
+    animation: floatOrb 7s ease-in-out infinite;
+}
+
+.orb.one {
+    width: 180px;
+    height: 180px;
+    background: rgba(66,168,95,0.18);
+    top: 10%;
+    left: -60px;
+}
+
+.orb.two {
+    width: 250px;
+    height: 250px;
+    background: rgba(18,97,160,0.12);
+    bottom: -100px;
+    right: -70px;
+    animation-delay: 2s;
+}
+
+.orb.three {
+    width: 90px;
+    height: 90px;
+    background: rgba(66,168,95,0.18);
+    top: 25%;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+
+/* =========================
+   GLOBE
+========================= */
+
+.globe {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border: 2px solid rgba(18,97,160,0.12);
+    border-radius: 50%;
+    right: -100px;
+    top: 90px;
+    animation: rotateGlobe 20s linear infinite;
+}
+
+.globe::before,
+.globe::after {
+    content: "";
+    position: absolute;
+    inset: 35px;
+    border: 1px solid rgba(18,97,160,0.12);
+    border-radius: 50%;
+}
+
+.globe::after {
+    inset: 0 105px;
+    border-radius: 50%;
+}
+
+.orbit {
+    position: absolute;
+    width: 430px;
+    height: 150px;
+    border: 2px solid rgba(66,168,95,0.25);
+    border-radius: 50%;
+    right: -140px;
+    top: 190px;
+    transform: rotate(-25deg);
+    animation: orbitMove 8s linear infinite;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #ffffff;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content h3 {
+    color: #1261a0;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.about-content p {
+    color: #667085;
+    font-size: 17px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px 24px;
+    text-align: center;
+    border: 1px solid #e6edf3;
+    box-shadow: 0 8px 25px rgba(16,24,40,0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(16,24,40,0.12);
+}
+
+.card-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #0b2d5c;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #667085;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #f8fbfd;
+}
+
+
+/* =========================
+   WORK WITH
+========================= */
+
+.work-with {
+    background: #ffffff;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works {
+    background: #f8fbfd;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1261a0, #42a85f);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(18,97,160,0.2);
+}
+
+.step h3 {
+    color: #0b2d5c;
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: #667085;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: linear-gradient(135deg, #0b2d5c, #1261a0);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: white;
+    color: #1261a0;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px);
+}
+
+.email {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071b35;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.footer-logo span {
+    color: #42a85f;
+}
+
+footer p {
+    color: #aab8c8;
+    font-size: 14px;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* =========================
+   CARD STAGGER
+========================= */
+
+.card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.card:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.card:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.card:nth-child(4) {
+    transition-delay: 0.35s;
+}
+
+.card:nth-child(5) {
+    transition-delay: 0.45s;
+}
+
+.card:nth-child(6) {
+    transition-delay: 0.55s;
+}
+
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes heroTitle {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatOrb {
+    0%, 100% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(25px,-25px);
+    }
+}
+
+@keyframes rotateGlobe {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitMove {
+    from {
+        transform: rotate(-25deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-25deg) rotate(360deg);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    section {
+        padding: 65px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .globe {
+        width: 250px;
+        height: 250px;
+        right: -120px;
+        top: 110px;
+    }
+
+    .orbit {
+        width: 300px;
+        right: -150px;
+        top: 170px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
 
-    <header>
+<!-- =========================
+     HEADER
+========================= -->
 
-        <a href="#home" class="logo">
-            RITU<span>VAYA</span>
-        </a>
+<header>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<div class="container navbar">
 
-    </header>
+<a href="#home" class="logo">
+RITU<span>VAYA</span>
+</a>
 
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <!-- HERO -->
+</div>
 
-    <section id="home" class="hero">
+</header>
 
-        <h1>RITU<span>VAYA</span> 🌍</h1>
 
-        <h2>
-            Connecting Possibilities Worldwide.
-        </h2>
+<!-- =========================
+     HERO
+========================= -->
 
-        <p>
-            Connecting businesses with the right products,
-            suppliers, services and opportunities.
-        </p>
+<section class="hero" id="home">
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
-            class="button"
-            target="_blank">
-            Start a Business Enquiry
-        </a>
+<div class="orb one"></div>
+<div class="orb two"></div>
+<div class="orb three"></div>
 
-    </section>
+<div class="globe"></div>
+<div class="orbit"></div>
 
+<div class="container hero-content">
 
-    <!-- ABOUT -->
+<div class="hero-badge">
+🌍 Global Business Connections
+</div>
 
-    <section id="about">
+<h1>
+RITU<span>VAYA</span>
+</h1>
 
-        <h2 class="section-title">
-            Who We Are
-        </h2>
+<h2>
+Connecting Possibilities Worldwide. 🌍
+</h2>
 
-        <div class="about">
+<p>
+RITUVAYA connects businesses with suitable manufacturers,
+suppliers, service providers, business partners and opportunities
+across India and international markets.
+</p>
 
-            <p>
-                RITUVAYA is a business connection and sourcing platform
-                focused on helping businesses find the right products,
-                suppliers, services, partners and opportunities.
-            </p>
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
+class="hero-btn"
+target="_blank">
+Start a Business Enquiry
+</a>
 
-            <br>
+</div>
 
-            <p>
-                Our goal is simple:
-                <strong>
-                    Right Requirement → Right Connection → Right Opportunity.
-                </strong>
-            </p>
+</section>
 
-        </div>
 
-    </section>
+<!-- =========================
+     ABOUT
+========================= -->
 
+<section class="about" id="about">
 
-    <!-- SERVICES -->
+<div class="container">
 
-    <section id="services" class="services">
+<div class="section-title reveal">
+<h2>Who We Are</h2>
+<p>
+A growing business connection and sourcing platform.
+</p>
+</div>
 
-        <h2 class="section-title">
-            What We Do
-        </h2>
+<div class="about-content reveal">
 
-        <div class="cards">
+<h3>
+RITUVAYA — Connecting Businesses Worldwide
+</h3>
 
-            <div class="card">
+<p>
+RITUVAYA is a business connection and sourcing company
+focused on connecting companies with the right manufacturers,
+suppliers, service providers, business partners and opportunities
+across India and international markets.
+</p>
 
-                <h3>
-                    🌍 Global & Domestic Sourcing
-                </h3>
+</div>
 
-                <p>
-                    Helping businesses find suitable products,
-                    manufacturers and suppliers.
-                </p>
+</div>
 
-            </div>
+</section>
 
 
-            <div class="card">
+<!-- =========================
+     SERVICES
+========================= -->
 
-                <h3>
-                    🤝 Supplier Connections
-                </h3>
+<section class="services" id="services">
 
-                <p>
-                    Connecting buyers with suitable manufacturers,
-                    suppliers and distributors.
-                </p>
+<div class="container">
 
-            </div>
+<div class="section-title reveal">
 
+<h2>What We Do</h2>
 
-            <div class="card">
+<p>
+We help businesses discover the right connections
+for their requirements and opportunities.
+</p>
 
-                <h3>
-                    💼 B2B Opportunities
-                </h3>
+</div>
 
-                <p>
-                    Connecting businesses with potential partners
-                    and business opportunities.
-                </p>
 
-            </div>
+<div class="cards">
 
 
-            <div class="card">
+<div class="card reveal">
 
-                <h3>
-                    🛠️ Technical Services
-                </h3>
+<div class="card-icon">🌍</div>
 
-                <p>
-                    Connecting companies with technical and
-                    professional service providers.
-                </p>
+<h3>
+Global & Domestic Sourcing
+</h3>
 
-            </div>
+<p>
+Finding suitable products, manufacturers and suppliers
+for business requirements.
+</p>
 
+</div>
 
-            <div class="card">
 
-                <h3>
-                    🔎 Requirement Matching
-                </h3>
+<div class="card reveal">
 
-                <p>
-                    Understanding business requirements and
-                    finding suitable connections.
-                </p>
+<div class="card-icon">🏭</div>
 
-            </div>
+<h3>
+Manufacturer Connections
+</h3>
 
+<p>
+Connecting buyers with suitable manufacturers
+and production partners.
+</p>
 
-            <div class="card">
+</div>
 
-                <h3>
-                    🚀 Business Growth
-                </h3>
 
-                <p>
-                    Helping businesses discover new markets,
-                    connections and opportunities.
-                </p>
+<div class="card reveal">
 
-            </div>
+<div class="card-icon">🤝</div>
 
-        </div>
+<h3>
+B2B Opportunities
+</h3>
 
-    </section>
+<p>
+Helping businesses discover potential partnerships
+and commercial opportunities.
+</p>
 
+</div>
 
-    <!-- WHO WE WORK WITH -->
 
-    <section class="partners">
+<div class="card reveal">
 
-        <h2 class="section-title">
-            Who We Work With
-        </h2>
+<div class="card-icon">⚙️</div>
 
-        <div class="cards">
+<h3>
+Technical Services
+</h3>
 
-            <div class="card">
+<p>
+Connecting companies with technical and professional
+service providers.
+</p>
 
-                <h3>
-                    🏢 Buyers & Businesses
-                </h3>
+</div>
 
-                <p>
-                    Companies looking for products, suppliers,
-                    services and business opportunities.
-                </p>
 
-            </div>
+<div class="card reveal">
 
+<div class="card-icon">🔎</div>
 
-            <div class="card">
+<h3>
+Requirement-Based Matching
+</h3>
 
-                <h3>
-                    🏭 Manufacturers
-                </h3>
+<p>
+Understanding requirements and identifying suitable
+business connections.
+</p>
 
-                <p>
-                    Manufacturers looking to connect with
-                    new buyers and business opportunities.
-                </p>
+</div>
 
-            </div>
 
+<div class="card reveal">
 
-            <div class="card">
+<div class="card-icon">🚀</div>
 
-                <h3>
-                    📦 Suppliers & Distributors
-                </h3>
+<h3>
+Business Partner Connections
+</h3>
 
-                <p>
-                    Suppliers and distributors looking to
-                    expand their business connections.
-                </p>
+<p>
+Helping companies discover potential partners
+for future growth.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="card">
+</div>
 
-                <h3>
-                    🛠️ Service Providers
-                </h3>
+</div>
 
-                <p>
-                    Technical and professional service providers
-                    looking for business connections.
-                </p>
+</section>
 
-            </div>
 
+<!-- =========================
+     WHO WE WORK WITH
+========================= -->
 
-            <div class="card">
+<section class="work-with">
 
-                <h3>
-                    🌍 International Companies
-                </h3>
+<div class="container">
 
-                <p>
-                    International businesses seeking reliable
-                    connections across India and global markets.
-                </p>
+<div class="section-title reveal">
 
-            </div>
+<h2>Who We Work With</h2>
 
+<p>
+Building connections across different parts of the
+business ecosystem.
+</p>
 
-            <div class="card">
+</div>
 
-                <h3>
-                    🤝 Business Partners
-                </h3>
 
-                <p>
-                    Businesses looking for strategic partners,
-                    collaborations and new opportunities.
-                </p>
+<div class="cards">
 
-            </div>
 
-        </div>
+<div class="card reveal">
+<div class="card-icon">🛒</div>
+<h3>Buyers & Businesses</h3>
+<p>
+Companies looking for products, suppliers or services.
+</p>
+</div>
 
-    </section>
 
+<div class="card reveal">
+<div class="card-icon">🏭</div>
+<h3>Manufacturers</h3>
+<p>
+Manufacturers looking to reach new business opportunities.
+</p>
+</div>
 
-    <!-- WHY RITUVAYA -->
-    <section class="why">
 
-    <section class="why">
+<div class="card reveal">
+<div class="card-icon">📦</div>
+<h3>Suppliers & Distributors</h3>
+<p>
+Suppliers and distributors serving different markets.
+</p>
+</div>
 
-        <h2 class="section-title">
-            Why RITUVAYA?
-        </h2>
 
-        <div class="cards">
+<div class="card reveal">
+<div class="card-icon">🛠️</div>
+<h3>Service Providers</h3>
+<p>
+Technical and professional service providers.
+</p>
+</div>
 
-            <div class="card">
 
-                <h3>
-                    🎯 Requirement Focused
-                </h3>
+<div class="card reveal">
+<div class="card-icon">🌎</div>
+<h3>International Companies</h3>
+<p>
+Businesses looking to connect with Indian and global markets.
+</p>
+</div>
 
-                <p>
-                    We understand your requirement before
-                    searching for the right business connection.
-                </p>
 
-            </div>
+<div class="card reveal">
+<div class="card-icon">🤝</div>
+<h3>Business Partners</h3>
+<p>
+Companies seeking partnerships and new opportunities.
+</p>
+</div>
 
 
-            <div class="card">
+</div>
 
-                <h3>
-                    🔎 Suitable Connections
-                </h3>
+</div>
 
-                <p>
-                    We look for suitable manufacturers,
-                    suppliers, service providers and partners.
-                </p>
+</section>
 
-            </div>
 
+<!-- =========================
+     HOW IT WORKS
+========================= -->
 
-            <div class="card">
+<section class="how-it-works">
 
-                <h3>
-                    🌍 Global Reach
-                </h3>
+<div class="container">
 
-                <p>
-                    Connecting businesses across India
-                    and international markets.
-                </p>
+<div class="section-title reveal">
 
-            </div>
+<h2>How RITUVAYA Works</h2>
 
+<p>
+A simple process to help businesses find the right connection.
+</p>
 
-            <div class="card">
+</div>
 
-                <h3>
-                    🤝 Business Support
-                </h3>
 
-                <p>
-                    Supporting communication and follow-up
-                    throughout the connection process.
-                </p>
+<div class="steps">
 
-            </div>
 
-        </div>
+<div class="step reveal">
 
-    </section>
+<div class="step-number">
+1
+</div>
 
+<h3>
+Share Requirement
+</h3>
 
-    <!-- HOW RITUVAYA WORKS -->
+<p>
+Tell us what product, service or business connection you need.
+</p>
 
-    <section class="how">
+</div>
 
-        <h2 class="section-title">
-            How RITUVAYA Works
-        </h2>
 
-        <div class="steps">
+<div class="step reveal">
 
-            <div class="step">
-                1️⃣ Share Requirement
-            </div>
+<div class="step-number">
+2
+</div>
 
-            <div class="step">
-                2️⃣ Understand
-            </div>
+<h3>
+Understand
+</h3>
 
-            <div class="step">
-                3️⃣ Find Connections
-            </div>
+<p>
+We understand your requirement and business needs.
+</p>
 
-            <div class="step">
-                4️⃣ Connect
-            </div>
+</div>
 
-            <div class="step">
-                5️⃣ Follow Up
-            </div>
 
-        </div>
+<div class="step reveal">
 
-    </section>
+<div class="step-number">
+3
+</div>
 
+<h3>
+Find Connections
+</h3>
 
-    <!-- CONTACT -->
+<p>
+We research and identify suitable businesses or suppliers.
+</p>
 
-    <section id="contact" class="contact">
+</div>
 
-        <h2 class="section-title">
-            Let's Connect
-        </h2>
 
-        <p>
-            Have a business requirement?
-        </p>
+<div class="step reveal">
 
-        <p>
-            Tell us what you need and we'll help you find
-            the right connection.
-        </p>
+<div class="step-number">
+4
+</div>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
-            class="button"
-            target="_blank">
-            Business Enquiry
-        </a>
+<h3>
+Connect
+</h3>
 
-        <br>
-        <br>
+<p>
+We help establish the connection between both sides.
+</p>
 
-        <p>
-            📧 rituvaya.connect@gmail.com
-        </p>
+</div>
 
-    </section>
 
+<div class="step reveal">
 
-    <!-- FOOTER -->
+<div class="step-number">
+5
+</div>
 
-    <footer>
+<h3>
+Support
+</h3>
 
-        <p>
-            © 2026 RITUVAYA. All Rights Reserved.
-        </p>
+<p>
+We support the communication and follow-up process.
+</p>
 
-        <p>
-            Connecting Possibilities Worldwide. 🌍
-        </p>
+</div>
 
-    </footer>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MISSION
+========================= -->
+
+<section class="about">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>Our Mission</h2>
+
+<p>
+To make business connections simpler.
+</p>
+
+</div>
+
+<div class="about-content reveal">
+
+<h3>
+Right Requirement → Right Connection → Right Opportunity
+</h3>
+
+<p>
+Our mission is to help businesses discover the right
+connections and create meaningful opportunities across markets.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VISION
+========================= -->
+
+<section class="services">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>Our Vision</h2>
+
+<p>
+Building a trusted global business connection platform.
+</p>
+
+</div>
+
+<div class="about-content reveal">
+
+<p>
+RITUVAYA aims to become a trusted global business connection
+platform where companies can discover products, suppliers,
+services, partners and opportunities across borders.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container reveal">
+
+<h2>
+Let's Connect 🌍
+</h2>
+
+<p>
+Have a business requirement or looking for a suitable connection?
+</p>
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
+class="contact-btn"
+target="_blank">
+Business Enquiry
+</a>
+
+<div class="email">
+rituvaya.connect@gmail.com
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-logo">
+RITU<span>VAYA</span>
+</div>
+
+<p>
+Connecting Possibilities Worldwide. 🌍
+</p>
+
+<p>
+© 2026 RITUVAYA. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right"
+);
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+
+revealElements.forEach((element) => {
+
+    observer.observe(element);
+
+});
+
+
+</script>
 
 
 </body>
-
 </html>
