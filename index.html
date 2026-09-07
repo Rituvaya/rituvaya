@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RITUVAYA — Connecting Possibilities Worldwide</title>
+<title>RITUVAYA | Connecting Possibilities Worldwide</title>
 
-<meta name="description" content="RITUVAYA connects businesses with manufacturers, suppliers, service providers and opportunities across India and international markets.">
+<meta name="description"
+content="RITUVAYA connects businesses with manufacturers, suppliers, service providers and global business opportunities.">
 
 <style>
 
-/* =========================
-   GLOBAL
-========================= */
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
     margin: 0;
@@ -26,69 +28,88 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #1f2937;
+    background: #f7fbff;
+    color: #172033;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .container {
     width: 90%;
-    max-width: 1150px;
+    max-width: 1180px;
     margin: auto;
 }
 
 section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
-.section-title {
+.section-heading {
     text-align: center;
-    margin-bottom: 45px;
+    max-width: 750px;
+    margin: 0 auto 60px;
 }
 
-.section-title h2 {
-    font-size: 36px;
-    color: #0b2d5c;
-    margin-bottom: 12px;
+.section-heading .tag {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 50px;
+    background: rgba(18,97,160,0.08);
+    color: #1261a0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
-.section-title p {
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    color: #082b57;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
     color: #667085;
-    max-width: 700px;
-    margin: auto;
+    font-size: 17px;
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.94);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 15px 0;
+    transition: 0.4s ease;
+}
+
+header.scrolled {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
 .navbar {
-    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 2px;
     color: #1261a0;
-    letter-spacing: 1px;
 }
 
 .logo span {
@@ -97,62 +118,83 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 28px;
     list-style: none;
 }
 
 .nav-links a {
     color: #344054;
-    font-weight: 600;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: -7px;
+    background: #42a85f;
     transition: 0.3s;
+    transform: translateX(-50%);
 }
 
-.nav-links a:hover {
-    color: #1261a0;
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: linear-gradient(135deg,#1261a0,#0b2d5c);
+    color: white !important;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
-    min-height: 650px;
+    min-height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     overflow: hidden;
     background:
-        radial-gradient(circle at 80% 20%, rgba(66,168,95,0.20), transparent 30%),
-        radial-gradient(circle at 15% 80%, rgba(18,97,160,0.18), transparent 35%),
-        linear-gradient(135deg, #f5fbff, #ffffff);
+        radial-gradient(circle at 85% 20%, rgba(66,168,95,0.20), transparent 25%),
+        radial-gradient(circle at 10% 80%, rgba(18,97,160,0.18), transparent 30%),
+        linear-gradient(135deg,#f5fbff,#ffffff);
 }
 
 .hero-content {
     position: relative;
-    z-index: 3;
+    z-index: 5;
     text-align: center;
-    max-width: 850px;
+    max-width: 900px;
     margin: auto;
+    padding-top: 50px;
 }
 
 .hero-badge {
     display: inline-block;
-    padding: 8px 18px;
+    padding: 9px 18px;
     border-radius: 50px;
     background: rgba(18,97,160,0.08);
     color: #1261a0;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-weight: 800;
     animation: fadeDown 1s ease forwards;
 }
 
 .hero h1 {
-    font-size: clamp(46px, 9vw, 82px);
-    color: #0b2d5c;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    animation: heroTitle 1s ease forwards;
+    margin-top: 20px;
+    font-size: clamp(60px,12vw,110px);
+    line-height: 1;
+    letter-spacing: 4px;
+    color: #082b57;
+    animation: titleReveal 1s ease forwards;
 }
 
 .hero h1 span {
@@ -160,181 +202,322 @@ header {
 }
 
 .hero h2 {
-    font-size: clamp(20px, 4vw, 30px);
+    margin-top: 20px;
+    font-size: clamp(22px,4vw,34px);
     color: #1261a0;
-    margin-bottom: 20px;
     animation: fadeUp 1s ease 0.3s forwards;
     opacity: 0;
 }
 
 .hero p {
+    max-width: 760px;
+    margin: 25px auto;
     font-size: 18px;
     color: #667085;
-    max-width: 700px;
-    margin: auto auto 30px;
     animation: fadeUp 1s ease 0.6s forwards;
     opacity: 0;
 }
 
-.hero-btn {
-    display: inline-block;
-    padding: 15px 28px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #1261a0, #0b2d5c);
-    color: white;
-    font-weight: 700;
-    box-shadow: 0 10px 25px rgba(18,97,160,0.25);
-    transition: 0.3s;
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
     animation: fadeUp 1s ease 0.9s forwards;
     opacity: 0;
 }
 
-.hero-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(18,97,160,0.35);
+.primary-btn,
+.secondary-btn {
+    padding: 15px 25px;
+    border-radius: 9px;
+    font-weight: 800;
+    transition: 0.35s;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg,#1261a0,#0b2d5c);
+    color: white;
+    box-shadow: 0 12px 30px rgba(18,97,160,0.25);
+}
+
+.secondary-btn {
+    background: white;
+    color: #1261a0;
+    border: 1px solid #dce8f1;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-5px);
 }
 
 
-/* =========================
-   ANIMATED BACKGROUND
-========================= */
+/* =====================================================
+   HERO ANIMATION
+===================================================== */
 
-.orb {
+.hero-glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(2px);
-    opacity: 0.45;
-    animation: floatOrb 7s ease-in-out infinite;
+    filter: blur(3px);
+    animation: float 7s ease-in-out infinite;
 }
 
-.orb.one {
-    width: 180px;
-    height: 180px;
-    background: rgba(66,168,95,0.18);
-    top: 10%;
-    left: -60px;
+.glow-one {
+    width: 220px;
+    height: 220px;
+    background: rgba(66,168,95,0.13);
+    left: -80px;
+    top: 20%;
 }
 
-.orb.two {
-    width: 250px;
-    height: 250px;
-    background: rgba(18,97,160,0.12);
-    bottom: -100px;
-    right: -70px;
+.glow-two {
+    width: 300px;
+    height: 300px;
+    background: rgba(18,97,160,0.10);
+    right: -120px;
+    bottom: 5%;
     animation-delay: 2s;
 }
 
-.orb.three {
-    width: 90px;
-    height: 90px;
-    background: rgba(66,168,95,0.18);
-    top: 25%;
-    right: 12%;
-    animation-delay: 1s;
-}
-
-
-/* =========================
-   GLOBE
-========================= */
-
-.globe {
+.network {
     position: absolute;
-    width: 360px;
-    height: 360px;
-    border: 2px solid rgba(18,97,160,0.12);
+    width: 420px;
+    height: 420px;
+    right: -120px;
+    top: 18%;
+    border: 1px solid rgba(18,97,160,0.13);
     border-radius: 50%;
-    right: -100px;
-    top: 90px;
-    animation: rotateGlobe 20s linear infinite;
+    animation: spin 25s linear infinite;
 }
 
-.globe::before,
-.globe::after {
+.network::before,
+.network::after {
     content: "";
     position: absolute;
-    inset: 35px;
-    border: 1px solid rgba(18,97,160,0.12);
+    inset: 45px;
+    border: 1px solid rgba(66,168,95,0.18);
     border-radius: 50%;
 }
 
-.globe::after {
-    inset: 0 105px;
-    border-radius: 50%;
+.network::after {
+    inset: 110px;
 }
 
-.orbit {
+.node {
     position: absolute;
-    width: 430px;
-    height: 150px;
-    border: 2px solid rgba(66,168,95,0.25);
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    right: -140px;
-    top: 190px;
-    transform: rotate(-25deg);
-    animation: orbitMove 8s linear infinite;
+    background: #42a85f;
+    box-shadow: 0 0 0 8px rgba(66,168,95,0.10);
+}
+
+.node.one {
+    top: 15%;
+    left: 50%;
+}
+
+.node.two {
+    top: 55%;
+    left: 8%;
+}
+
+.node.three {
+    bottom: 15%;
+    right: 25%;
+}
+
+.node.four {
+    top: 30%;
+    right: 8%;
 }
 
 
-/* =========================
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.stat {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(15px);
+    border: 1px solid #e3edf5;
+    border-radius: 16px;
+    padding: 28px 15px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(18,61,100,0.08);
+}
+
+.stat h3 {
+    font-size: 32px;
+    color: #1261a0;
+}
+
+.stat p {
+    color: #667085;
+    font-size: 14px;
+}
+
+
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about {
-    background: #ffffff;
+    background: white;
 }
 
-.about-content {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.about-content h3 {
-    color: #1261a0;
-    font-size: 25px;
-    margin-bottom: 18px;
+.about-text h3 {
+    font-size: 32px;
+    color: #082b57;
+    margin-bottom: 20px;
 }
 
-.about-content p {
+.about-text p {
     color: #667085;
-    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.about-visual {
+    min-height: 360px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg,rgba(18,97,160,0.95),rgba(8,43,87,0.98));
+    box-shadow: 0 25px 60px rgba(8,43,87,0.20);
+}
+
+.about-circle {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+}
+
+.about-circle.one {
+    width: 300px;
+    height: 300px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-circle.two {
+    width: 180px;
+    height: 180px;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.about-center strong {
+    font-size: 38px;
+    display: block;
+}
+
+.about-center span {
+    opacity: 0.8;
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+    background: #f6fafd;
+}
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
 }
 
 .card {
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 30px 24px;
-    text-align: center;
-    border: 1px solid #e6edf3;
-    box-shadow: 0 8px 25px rgba(16,24,40,0.06);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+    padding: 32px 25px;
+    background: white;
+    border: 1px solid #e3edf5;
+    border-radius: 17px;
+    box-shadow: 0 10px 30px rgba(16,24,40,0.05);
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg,#1261a0,#42a85f);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 18px 40px rgba(16,24,40,0.12);
+    box-shadow: 0 25px 50px rgba(16,24,40,0.12);
 }
 
-.card-icon {
-    font-size: 42px;
-    margin-bottom: 15px;
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: rgba(18,97,160,0.08);
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.card:hover .icon {
+    transform: rotate(8deg) scale(1.1);
 }
 
 .card h3 {
-    color: #0b2d5c;
+    color: #082b57;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .card p {
@@ -342,164 +525,196 @@ header {
 }
 
 
-/* =========================
-   SERVICES
-========================= */
+/* =====================================================
+   WHY CHOOSE
+===================================================== */
 
-.services {
-    background: #f8fbfd;
+.why {
+    background: white;
 }
 
-
-/* =========================
-   WHY CHOOSE RITUVAYA
-========================= */
-
-.why-choose {
-    background: #ffffff;
-}
-
-.why-choose .card {
-    position: relative;
-    overflow: hidden;
-}
-
-.why-choose .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #1261a0, #42a85f);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.35s ease;
-}
-
-.why-choose .card:hover::before {
-    transform: scaleX(1);
-}
-
-.why-choose .card-icon {
-    transition: transform 0.35s ease;
-}
-
-.why-choose .card:hover .card-icon {
-    transform: scale(1.15);
-}
-
-
-/* =========================
-   WORK WITH
-========================= */
-
-.work-with {
-    background: #ffffff;
-}
-
-
-/* =========================
-   HOW IT WORKS
-========================= */
-
-.how-it-works {
-    background: #f8fbfd;
-}
-
-.steps {
+.why-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
 }
 
-.step {
+.why-card {
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(145deg,#ffffff,#f5faff);
+    border: 1px solid #e1edf5;
+    transition: 0.4s;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(18,97,160,0.25);
+    box-shadow: 0 20px 45px rgba(18,61,100,0.10);
+}
+
+.why-number {
+    font-size: 14px;
+    font-weight: 900;
+    color: #42a85f;
+    margin-bottom: 12px;
+}
+
+.why-card h3 {
+    color: #082b57;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #667085;
+}
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.process {
+    background: #f6fafd;
+}
+
+.process-line {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    position: relative;
+}
+
+.process-step {
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
-.step-number {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 18px;
+.process-number {
+    width: 65px;
+    height: 65px;
+    margin: auto auto 18px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #1261a0, #42a85f);
+    background: linear-gradient(135deg,#1261a0,#42a85f);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 900;
     font-size: 22px;
-    font-weight: bold;
-    box-shadow: 0 10px 25px rgba(18,97,160,0.2);
+    box-shadow: 0 12px 25px rgba(18,97,160,0.22);
+    transition: 0.4s;
 }
 
-.step h3 {
-    color: #0b2d5c;
+.process-step:hover .process-number {
+    transform: scale(1.15) rotate(8deg);
+}
+
+.process-step h3 {
+    color: #082b57;
     margin-bottom: 8px;
 }
 
-.step p {
+.process-step p {
     color: #667085;
     font-size: 14px;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* =====================================================
+   GLOBAL REACH
+===================================================== */
 
-.contact {
-    background: linear-gradient(135deg, #0b2d5c, #1261a0);
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+.reach {
+    background: white;
 }
 
-.contact h2 {
-    font-size: 38px;
+.reach-box {
+    border-radius: 25px;
+    padding: 70px 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,#082b57,#1261a0);
+}
+
+.reach-box::before {
+    content: "🌍";
+    position: absolute;
+    font-size: 220px;
+    opacity: 0.06;
+    right: 5%;
+    top: -40px;
+    animation: spin 30s linear infinite;
+}
+
+.reach-box h2 {
+    font-size: clamp(30px,5vw,48px);
     margin-bottom: 15px;
 }
 
-.contact p {
-    margin-bottom: 25px;
-    opacity: 0.9;
+.reach-box p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.85;
 }
 
-.contact-btn {
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+    background:
+        radial-gradient(circle at 10% 20%,rgba(66,168,95,0.18),transparent 25%),
+        linear-gradient(135deg,#071d3b,#1261a0);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: clamp(32px,5vw,52px);
+    margin-bottom: 15px;
+}
+
+.cta p {
+    opacity: 0.85;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.cta-btn {
     display: inline-block;
+    padding: 16px 30px;
     background: white;
     color: #1261a0;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: 0.3s;
+    border-radius: 9px;
+    font-weight: 900;
+    transition: 0.35s;
 }
 
-.contact-btn:hover {
-    transform: translateY(-4px);
-}
-
-.email {
-    margin-top: 20px;
-    font-weight: 600;
+.cta-btn:hover {
+    transform: translateY(-5px) scale(1.03);
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
-    background: #071b35;
+    background: #06172d;
     color: white;
-    padding: 35px 0;
+    padding: 45px 0;
     text-align: center;
 }
 
 .footer-logo {
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 2px;
     margin-bottom: 8px;
 }
 
@@ -508,14 +723,14 @@ footer {
 }
 
 footer p {
-    color: #aab8c8;
+    color: #91a2b8;
     font-size: 14px;
 }
 
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
 
 .reveal {
     opacity: 0;
@@ -528,75 +743,27 @@ footer p {
     transform: translateY(0);
 }
 
-.reveal-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-.reveal-left.active {
-    opacity: 1;
-    transform: translateX(0);
-}
+/* =====================================================
+   ANIMATIONS
+===================================================== */
 
-.reveal-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+@keyframes titleReveal {
 
-.reveal-right.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
-/* =========================
-   CARD STAGGER
-========================= */
-
-.card:nth-child(1) {
-    transition-delay: 0.05s;
-}
-
-.card:nth-child(2) {
-    transition-delay: 0.15s;
-}
-
-.card:nth-child(3) {
-    transition-delay: 0.25s;
-}
-
-.card:nth-child(4) {
-    transition-delay: 0.35s;
-}
-
-.card:nth-child(5) {
-    transition-delay: 0.45s;
-}
-
-.card:nth-child(6) {
-    transition-delay: 0.55s;
-}
-
-
-/* =========================
-   KEYFRAMES
-========================= */
-
-@keyframes heroTitle {
     from {
         opacity: 0;
-        transform: translateY(35px) scale(0.95);
+        transform: translateY(40px) scale(0.92);
     }
 
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+
 }
 
 @keyframes fadeUp {
+
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -606,9 +773,11 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 @keyframes fadeDown {
+
     from {
         opacity: 0;
         transform: translateY(-25px);
@@ -618,19 +787,23 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
-@keyframes floatOrb {
-    0%, 100% {
+@keyframes float {
+
+    0%,100% {
         transform: translate(0,0);
     }
 
     50% {
         transform: translate(25px,-25px);
     }
+
 }
 
-@keyframes rotateGlobe {
+@keyframes spin {
+
     from {
         transform: rotate(0deg);
     }
@@ -638,47 +811,74 @@ footer p {
     to {
         transform: rotate(360deg);
     }
-}
 
-@keyframes orbitMove {
-    from {
-        transform: rotate(-25deg) rotate(0deg);
-    }
-
-    to {
-        transform: rotate(-25deg) rotate(360deg);
-    }
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
     section {
-        padding: 65px 0;
-    }
-
-    .navbar {
-        flex-direction: column;
-        padding: 15px 0;
-        gap: 10px;
+        padding: 75px 0;
     }
 
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
     }
 
     .hero {
-        min-height: 620px;
+        min-height: 850px;
     }
 
     .hero h1 {
-        font-size: 52px;
+        font-size: 65px;
+    }
+
+    .network {
+        width: 260px;
+        height: 260px;
+        right: -120px;
+        top: 110px;
+    }
+
+    .stats {
+        margin-top: 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-line {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
     }
 
     .hero h2 {
@@ -687,55 +887,21 @@ footer p {
 
     .hero p {
         font-size: 16px;
-        padding: 0 10px;
     }
 
-    .globe {
-        width: 250px;
-        height: 250px;
-        right: -120px;
-        top: 110px;
-    }
-
-    .orbit {
-        width: 300px;
-        right: -150px;
-        top: 170px;
-    }
-
-    .cards {
+    .stats-grid {
         grid-template-columns: 1fr;
     }
 
-    .steps {
-        grid-template-columns: 1fr;
-        gap: 35px;
+    .hero-buttons {
+        flex-direction: column;
     }
 
-    .section-title h2 {
-        font-size: 30px;
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
     }
 
-    .contact h2 {
-        font-size: 30px;
-    }
-}
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
 }
 
 </style>
@@ -745,11 +911,11 @@ footer p {
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
-<header>
+<header id="header">
 
 <div class="container navbar">
 
@@ -758,10 +924,33 @@ RITU<span>VAYA</span>
 </a>
 
 <ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#contact">Contact</a></li>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#why">Why Us</a>
+</li>
+
+<li>
+<a href="#process">How It Works</a>
+</li>
+
+<li>
+<a href="#contact" class="nav-cta">
+Let's Connect
+</a>
+</li>
+
 </ul>
 
 </div>
@@ -769,23 +958,29 @@ RITU<span>VAYA</span>
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="hero" id="home">
 
-<div class="orb one"></div>
-<div class="orb two"></div>
-<div class="orb three"></div>
+<div class="hero-glow glow-one"></div>
+<div class="hero-glow glow-two"></div>
 
-<div class="globe"></div>
-<div class="orbit"></div>
+<div class="network">
+
+<div class="node one"></div>
+<div class="node two"></div>
+<div class="node three"></div>
+<div class="node four"></div>
+
+</div>
+
 
 <div class="container hero-content">
 
 <div class="hero-badge">
-🌍 Global Business Connections
+🌍 GLOBAL BUSINESS CONNECTIONS
 </div>
 
 <h1>
@@ -793,54 +988,141 @@ RITU<span>VAYA</span>
 </h1>
 
 <h2>
-Connecting Possibilities Worldwide. 🌍
+Connecting Possibilities Worldwide.
 </h2>
 
 <p>
-RITUVAYA connects businesses with suitable manufacturers,
-suppliers, service providers, business partners and opportunities
-across India and international markets.
+We connect businesses with suitable manufacturers,
+suppliers, service providers, business partners and
+opportunities across India and international markets.
 </p>
+
+<div class="hero-buttons">
 
 <a
 href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
-class="hero-btn"
-target="_blank">
-Start a Business Enquiry
+target="_blank"
+class="primary-btn">
+Start a Business Enquiry →
 </a>
+
+<a
+href="#services"
+class="secondary-btn">
+Explore Our Services
+</a>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat reveal">
+<h3>🌍</h3>
+<p>Global Reach</p>
+</div>
+
+<div class="stat reveal">
+<h3>🏭</h3>
+<p>Manufacturers</p>
+</div>
+
+<div class="stat reveal">
+<h3>🤝</h3>
+<p>B2B Connections</p>
+</div>
+
+<div class="stat reveal">
+<h3>🚀</h3>
+<p>Growth Opportunities</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section class="about" id="about">
 
 <div class="container">
 
-<div class="section-title reveal">
-<h2>Who We Are</h2>
-<p>
-A growing business connection and sourcing platform.
-</p>
+<div class="section-heading reveal">
+
+<div class="tag">
+ABOUT RITUVAYA
 </div>
 
-<div class="about-content reveal">
+<h2>
+Connecting Businesses. Creating Opportunities.
+</h2>
+
+<p>
+A modern business connection and sourcing platform
+designed to make finding the right connection simpler.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-text reveal">
 
 <h3>
-RITUVAYA — Connecting Businesses Worldwide
+The Right Connection Can Change Everything.
 </h3>
 
 <p>
-RITUVAYA is a business connection and sourcing company
-focused on connecting companies with the right manufacturers,
-suppliers, service providers, business partners and opportunities
-across India and international markets.
+RITUVAYA helps businesses discover suitable
+manufacturers, suppliers, service providers,
+business partners and opportunities.
 </p>
+
+<p>
+Instead of spending valuable time searching across
+different markets, businesses can share their
+requirements with RITUVAYA and explore relevant
+connections.
+</p>
+
+<p>
+Our vision is to build a trusted network where
+businesses can connect across India and the world.
+</p>
+
+</div>
+
+
+<div class="about-visual reveal">
+
+<div class="about-circle one"></div>
+<div class="about-circle two"></div>
+
+<div class="about-center">
+
+<strong>RITUVAYA</strong>
+
+<span>
+Connecting Possibilities Worldwide
+</span>
+
+</div>
+
+</div>
 
 </div>
 
@@ -849,21 +1131,27 @@ across India and international markets.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+===================================================== -->
 
 <section class="services" id="services">
 
 <div class="container">
 
-<div class="section-title reveal">
+<div class="section-heading reveal">
 
-<h2>What We Do</h2>
+<div class="tag">
+WHAT WE DO
+</div>
+
+<h2>
+Business Connections Made Simpler.
+</h2>
 
 <p>
-We help businesses discover the right connections
-for their requirements and opportunities.
+We help businesses find the right products,
+people, suppliers and opportunities.
 </p>
 
 </div>
@@ -874,15 +1162,17 @@ for their requirements and opportunities.
 
 <div class="card reveal">
 
-<div class="card-icon">🌍</div>
+<div class="icon">
+🌍
+</div>
 
 <h3>
 Global & Domestic Sourcing
 </h3>
 
 <p>
-Finding suitable products, manufacturers and suppliers
-for business requirements.
+Find suitable products, manufacturers and suppliers
+for your business requirements.
 </p>
 
 </div>
@@ -890,15 +1180,17 @@ for business requirements.
 
 <div class="card reveal">
 
-<div class="card-icon">🏭</div>
+<div class="icon">
+🏭
+</div>
 
 <h3>
 Manufacturer Connections
 </h3>
 
 <p>
-Connecting buyers with suitable manufacturers
-and production partners.
+Connect with manufacturers and production partners
+across different industries.
 </p>
 
 </div>
@@ -906,15 +1198,17 @@ and production partners.
 
 <div class="card reveal">
 
-<div class="card-icon">🤝</div>
+<div class="icon">
+📦
+</div>
 
 <h3>
-B2B Opportunities
+Supplier Discovery
 </h3>
 
 <p>
-Helping businesses discover potential partnerships
-and commercial opportunities.
+Discover potential suppliers and distributors
+matching your requirements.
 </p>
 
 </div>
@@ -922,15 +1216,17 @@ and commercial opportunities.
 
 <div class="card reveal">
 
-<div class="card-icon">⚙️</div>
+<div class="icon">
+⚙️
+</div>
 
 <h3>
 Technical Services
 </h3>
 
 <p>
-Connecting companies with technical and professional
-service providers.
+Connect businesses with suitable technical
+and professional service providers.
 </p>
 
 </div>
@@ -938,401 +1234,13 @@ service providers.
 
 <div class="card reveal">
 
-<div class="card-icon">🔎</div>
-
-<h3>
-Requirement-Based Matching
-</h3>
-
-<p>
-Understanding requirements and identifying suitable
-business connections.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<div class="card-icon">🚀</div>
-
-<h3>
-Business Partner Connections
-</h3>
-
-<p>
-Helping companies discover potential partners
-for future growth.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     WHO WE WORK WITH
-========================= -->
-
-<section class="work-with">
-
-<div class="container">
-
-<div class="section-title reveal">
-
-<h2>Who We Work With</h2>
-
-<p>
-Building connections across different parts of the
-business ecosystem.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-<div class="card-icon">🛒</div>
-<h3>Buyers & Businesses</h3>
-<p>
-Companies looking for products, suppliers or services.
-</p>
-</div>
-
-
-<div class="card reveal">
-<div class="card-icon">🏭</div>
-<h3>Manufacturers</h3>
-<p>
-Manufacturers looking to reach new business opportunities.
-</p>
-</div>
-
-
-<div class="card reveal">
-<div class="card-icon">📦</div>
-<h3>Suppliers & Distributors</h3>
-<p>
-Suppliers and distributors serving different markets.
-</p>
-</div>
-
-
-<div class="card reveal">
-<div class="card-icon">🛠️</div>
-<h3>Service Providers</h3>
-<p>
-Technical and professional service providers.
-</p>
-</div>
-
-
-<div class="card reveal">
-<div class="card-icon">🌎</div>
-<h3>International Companies</h3>
-<p>
-Businesses looking to connect with Indian and global markets.
-</p>
-</div>
-
-
-<div class="card reveal">
-<div class="card-icon">🤝</div>
-<h3>Business Partners</h3>
-<p>
-Companies seeking partnerships and new opportunities.
-</p>
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     HOW IT WORKS
-========================= -->
-
-<section class="how-it-works">
-
-<div class="container">
-
-<div class="section-title reveal">
-
-<h2>How RITUVAYA Works</h2>
-
-<p>
-A simple process to help businesses find the right connection.
-</p>
-
-</div>
-
-
-<div class="steps">
-
-
-<div class="step reveal">
-
-<div class="step-number">
-1
+<div class="icon">
+🔎
 </div>
 
 <h3>
-Share Requirement
+Requirement Matching
 </h3>
 
 <p>
-Tell us what product, service or business connection you need.
-</p>
-
-</div>
-
-
-<div class="step reveal">
-
-<div class="step-number">
-2
-</div>
-
-<h3>
-Understand
-</h3>
-
-<p>
-We understand your requirement and business needs.
-</p>
-
-</div>
-
-
-<div class="step reveal">
-
-<div class="step-number">
-3
-</div>
-
-<h3>
-Find Connections
-</h3>
-
-<p>
-We research and identify suitable businesses or suppliers.
-</p>
-
-</div>
-
-
-<div class="step reveal">
-
-<div class="step-number">
-4
-</div>
-
-<h3>
-Connect
-</h3>
-
-<p>
-We help establish the connection between both sides.
-</p>
-
-</div>
-
-
-<div class="step reveal">
-
-<div class="step-number">
-5
-</div>
-
-<h3>
-Support
-</h3>
-
-<p>
-We support the communication and follow-up process.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     MISSION
-========================= -->
-
-<section class="about">
-
-<div class="container">
-
-<div class="section-title reveal">
-
-<h2>Our Mission</h2>
-
-<p>
-To make business connections simpler.
-</p>
-
-</div>
-
-<div class="about-content reveal">
-
-<h3>
-Right Requirement → Right Connection → Right Opportunity
-</h3>
-
-<p>
-Our mission is to help businesses discover the right
-connections and create meaningful opportunities across markets.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     VISION
-========================= -->
-
-<section class="services">
-
-<div class="container">
-
-<div class="section-title reveal">
-
-<h2>Our Vision</h2>
-
-<p>
-Building a trusted global business connection platform.
-</p>
-
-</div>
-
-<div class="about-content reveal">
-
-<p>
-RITUVAYA aims to become a trusted global business connection
-platform where companies can discover products, suppliers,
-services, partners and opportunities across borders.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     WHY CHOOSE RITUVAYA
-========================= -->
-
-<section class="why-choose">
-
-<div class="container">
-
-<div class="section-title reveal">
-
-<h2>
-Why Choose RITUVAYA?
-</h2>
-
-<p>
-Making business connections simpler, smarter and more reliable.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card reveal">
-
-<div class="card-icon">🎯</div>
-
-<h3>
-Requirement Focused
-</h3>
-
-<p>
-We understand your exact business requirement before looking for the right connection.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<div class="card-icon">🔎</div>
-
-<h3>
-Smart Matching
-</h3>
-
-<p>
-We identify suitable manufacturers, suppliers, service providers and business partners.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<div class="card-icon">🌍</div>
-
-<h3>
-India & Global Reach
-</h3>
-
-<p>
-Explore business connections across Indian and international markets.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<div class="card-icon">🤝</div>
-
-<h3>
-Trusted Connections
-</h3>
-
-<p>
-We focus on creating meaningful and professional business connections.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<div class="card-icon">⚡</div>
-
-<h3>
-Save Time
-</h3>
-
-<p>
-Reduce the time and effort required to search for the right business con
+We understand y
