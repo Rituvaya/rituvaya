@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -124,7 +122,6 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
-
     background:
         radial-gradient(circle at 80% 20%, rgba(66,168,95,0.20), transparent 30%),
         radial-gradient(circle at 15% 80%, rgba(18,97,160,0.18), transparent 35%),
@@ -355,6 +352,45 @@ header {
 
 
 /* =========================
+   WHY CHOOSE RITUVAYA
+========================= */
+
+.why-choose {
+    background: #ffffff;
+}
+
+.why-choose .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1261a0, #42a85f);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.why-choose .card:hover::before {
+    transform: scaleX(1);
+}
+
+.why-choose .card-icon {
+    transition: transform 0.35s ease;
+}
+
+.why-choose .card:hover .card-icon {
+    transform: scale(1.15);
+}
+
+
+/* =========================
    WORK WITH
 ========================= */
 
@@ -405,66 +441,6 @@ header {
 .step p {
     color: #667085;
     font-size: 14px;
-}
-
-
-/* =========================
-   MISSION
-========================= */
-
-.mission {
-    background: #ffffff;
-}
-
-
-/* =========================
-   VISION
-========================= */
-
-.vision {
-    background: #f8fbfd;
-}
-
-
-/* =========================
-   WHY CHOOSE RITUVAYA
-========================= */
-
-.why-choose {
-    background: #ffffff;
-}
-
-.why-choose .card {
-    position: relative;
-    overflow: hidden;
-}
-
-.why-choose .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-
-    background: linear-gradient(90deg, #1261a0, #42a85f);
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: transform 0.35s ease;
-}
-
-.why-choose .card:hover::before {
-    transform: scaleX(1);
-}
-
-.why-choose .card-icon {
-    transition: transform 0.35s ease;
-}
-
-.why-choose .card:hover .card-icon {
-    transform: scale(1.15);
 }
 
 
@@ -552,6 +528,28 @@ footer p {
     transform: translateY(0);
 }
 
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 /* =========================
    CARD STAGGER
@@ -587,7 +585,6 @@ footer p {
 ========================= */
 
 @keyframes heroTitle {
-
     from {
         opacity: 0;
         transform: translateY(35px) scale(0.95);
@@ -597,11 +594,9 @@ footer p {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-
 }
 
 @keyframes fadeUp {
-
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -611,11 +606,9 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 @keyframes fadeDown {
-
     from {
         opacity: 0;
         transform: translateY(-25px);
@@ -625,11 +618,9 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 @keyframes floatOrb {
-
     0%, 100% {
         transform: translate(0,0);
     }
@@ -637,11 +628,9 @@ footer p {
     50% {
         transform: translate(25px,-25px);
     }
-
 }
 
 @keyframes rotateGlobe {
-
     from {
         transform: rotate(0deg);
     }
@@ -649,11 +638,9 @@ footer p {
     to {
         transform: rotate(360deg);
     }
-
 }
 
 @keyframes orbitMove {
-
     from {
         transform: rotate(-25deg) rotate(0deg);
     }
@@ -661,7 +648,6 @@ footer p {
     to {
         transform: rotate(-25deg) rotate(360deg);
     }
-
 }
 
 
@@ -733,7 +719,6 @@ footer p {
     .contact h2 {
         font-size: 30px;
     }
-
 }
 
 
@@ -746,18 +731,14 @@ footer p {
     *,
     *::before,
     *::after {
-
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
-
     }
-
 }
 
 </style>
-
 </head>
 
 
@@ -777,23 +758,10 @@ RITU<span>VAYA</span>
 </a>
 
 <ul class="nav-links">
-
-<li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#about">About</a>
-</li>
-
-<li>
-<a href="#services">Services</a>
-</li>
-
-<li>
-<a href="#contact">Contact</a>
-</li>
-
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 
 </div>
@@ -838,9 +806,7 @@ across India and international markets.
 href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
 class="hero-btn"
 target="_blank">
-
 Start a Business Enquiry
-
 </a>
 
 </div>
@@ -857,15 +823,10 @@ Start a Business Enquiry
 <div class="container">
 
 <div class="section-title reveal">
-
-<h2>
-Who We Are
-</h2>
-
+<h2>Who We Are</h2>
 <p>
 A growing business connection and sourcing platform.
 </p>
-
 </div>
 
 <div class="about-content reveal">
@@ -898,9 +859,7 @@ across India and international markets.
 
 <div class="section-title reveal">
 
-<h2>
-What We Do
-</h2>
+<h2>What We Do</h2>
 
 <p>
 We help businesses discover the right connections
@@ -915,9 +874,7 @@ for their requirements and opportunities.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🌍
-</div>
+<div class="card-icon">🌍</div>
 
 <h3>
 Global & Domestic Sourcing
@@ -933,9 +890,7 @@ for business requirements.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🏭
-</div>
+<div class="card-icon">🏭</div>
 
 <h3>
 Manufacturer Connections
@@ -951,9 +906,7 @@ and production partners.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🤝
-</div>
+<div class="card-icon">🤝</div>
 
 <h3>
 B2B Opportunities
@@ -969,9 +922,7 @@ and commercial opportunities.
 
 <div class="card reveal">
 
-<div class="card-icon">
-⚙️
-</div>
+<div class="card-icon">⚙️</div>
 
 <h3>
 Technical Services
@@ -987,9 +938,7 @@ service providers.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🔎
-</div>
+<div class="card-icon">🔎</div>
 
 <h3>
 Requirement-Based Matching
@@ -1005,9 +954,7 @@ business connections.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🚀
-</div>
+<div class="card-icon">🚀</div>
 
 <h3>
 Business Partner Connections
@@ -1038,9 +985,7 @@ for future growth.
 
 <div class="section-title reveal">
 
-<h2>
-Who We Work With
-</h2>
+<h2>Who We Work With</h2>
 
 <p>
 Building connections across different parts of the
@@ -1054,104 +999,56 @@ business ecosystem.
 
 
 <div class="card reveal">
-
-<div class="card-icon">
-🛒
-</div>
-
-<h3>
-Buyers & Businesses
-</h3>
-
+<div class="card-icon">🛒</div>
+<h3>Buyers & Businesses</h3>
 <p>
 Companies looking for products, suppliers or services.
 </p>
-
 </div>
 
 
 <div class="card reveal">
-
-<div class="card-icon">
-🏭
-</div>
-
-<h3>
-Manufacturers
-</h3>
-
+<div class="card-icon">🏭</div>
+<h3>Manufacturers</h3>
 <p>
 Manufacturers looking to reach new business opportunities.
 </p>
-
 </div>
 
 
 <div class="card reveal">
-
-<div class="card-icon">
-📦
-</div>
-
-<h3>
-Suppliers & Distributors
-</h3>
-
+<div class="card-icon">📦</div>
+<h3>Suppliers & Distributors</h3>
 <p>
 Suppliers and distributors serving different markets.
 </p>
-
 </div>
 
 
 <div class="card reveal">
-
-<div class="card-icon">
-🛠️
-</div>
-
-<h3>
-Service Providers
-</h3>
-
+<div class="card-icon">🛠️</div>
+<h3>Service Providers</h3>
 <p>
 Technical and professional service providers.
 </p>
-
 </div>
 
 
 <div class="card reveal">
-
-<div class="card-icon">
-🌎
-</div>
-
-<h3>
-International Companies
-</h3>
-
+<div class="card-icon">🌎</div>
+<h3>International Companies</h3>
 <p>
 Businesses looking to connect with Indian and global markets.
 </p>
-
 </div>
 
 
 <div class="card reveal">
-
-<div class="card-icon">
-🤝
-</div>
-
-<h3>
-Business Partners
-</h3>
-
+<div class="card-icon">🤝</div>
+<h3>Business Partners</h3>
 <p>
 Companies seeking partnerships and new opportunities.
 </p>
-
 </div>
 
 
@@ -1172,9 +1069,7 @@ Companies seeking partnerships and new opportunities.
 
 <div class="section-title reveal">
 
-<h2>
-How RITUVAYA Works
-</h2>
+<h2>How RITUVAYA Works</h2>
 
 <p>
 A simple process to help businesses find the right connection.
@@ -1282,15 +1177,13 @@ We support the communication and follow-up process.
      MISSION
 ========================= -->
 
-<section class="mission">
+<section class="about">
 
 <div class="container">
 
 <div class="section-title reveal">
 
-<h2>
-Our Mission
-</h2>
+<h2>Our Mission</h2>
 
 <p>
 To make business connections simpler.
@@ -1320,15 +1213,13 @@ connections and create meaningful opportunities across markets.
      VISION
 ========================= -->
 
-<section class="vision">
+<section class="services">
 
 <div class="container">
 
 <div class="section-title reveal">
 
-<h2>
-Our Vision
-</h2>
+<h2>Our Vision</h2>
 
 <p>
 Building a trusted global business connection platform.
@@ -1377,17 +1268,14 @@ Making business connections simpler, smarter and more reliable.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🎯
-</div>
+<div class="card-icon">🎯</div>
 
 <h3>
 Requirement Focused
 </h3>
 
 <p>
-We understand your exact business requirement before
-looking for the right connection.
+We understand your exact business requirement before looking for the right connection.
 </p>
 
 </div>
@@ -1395,17 +1283,14 @@ looking for the right connection.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🔎
-</div>
+<div class="card-icon">🔎</div>
 
 <h3>
 Smart Matching
 </h3>
 
 <p>
-We identify suitable manufacturers, suppliers,
-service providers and business partners.
+We identify suitable manufacturers, suppliers, service providers and business partners.
 </p>
 
 </div>
@@ -1413,17 +1298,14 @@ service providers and business partners.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🌍
-</div>
+<div class="card-icon">🌍</div>
 
 <h3>
 India & Global Reach
 </h3>
 
 <p>
-Explore business connections across Indian and
-international markets.
+Explore business connections across Indian and international markets.
 </p>
 
 </div>
@@ -1431,17 +1313,14 @@ international markets.
 
 <div class="card reveal">
 
-<div class="card-icon">
-🤝
-</div>
+<div class="card-icon">🤝</div>
 
 <h3>
 Trusted Connections
 </h3>
 
 <p>
-We focus on creating meaningful and professional
-business connections.
+We focus on creating meaningful and professional business connections.
 </p>
 
 </div>
@@ -1449,21 +1328,11 @@ business connections.
 
 <div class="card reveal">
 
-<div class="card-icon">
-⚡
-</div>
+<div class="card-icon">⚡</div>
 
 <h3>
 Save Time
 </h3>
 
 <p>
-Reduce the time and effort required to search for
-the right business connection.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-   
+Reduce the time and effort required to search for the right business con
