@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RITUVAYA | Connecting Possibilities Worldwide</title>
+
+<meta name="description" content="RITUVAYA connects businesses with manufacturers, suppliers, service providers and business opportunities worldwide.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7fbfd;
+    color:#102f49;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid #e6eef2;
+    backdrop-filter:blur(12px);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:16px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#087fc1;
+}
+
+.logo span{
+    color:#43b96b;
+}
+
+.nav{
+    display:flex;
+    gap:25px;
+}
+
+.nav a{
+    color:#526a7b;
+    font-size:13px;
+    font-weight:500;
+}
+
+.nav a:hover{
+    color:#087fc1;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    background:
+    radial-gradient(circle at 10% 20%,#dff7fb,transparent 28%),
+    radial-gradient(circle at 90% 30%,#e3f7e9,transparent 30%),
+    linear-gradient(135deg,#ffffff,#effaff);
+}
+
+.hero-content{
+    width:100%;
+    max-width:850px;
+    margin:auto;
+    padding:80px 20px;
+    position:relative;
+    z-index:3;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:30px;
+    background:#e7f8fc;
+    color:#087fc1;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:64px;
+    letter-spacing:3px;
+    color:#102f49;
+    margin-bottom:8px;
+}
+
+.hero h1 span{
+    color:#43b96b;
+}
+
+.tagline{
+    font-size:20px;
+    color:#087fc1;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#708596;
+    font-size:14px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#087fc1;
+    color:white;
+    box-shadow:0 8px 25px rgba(8,127,193,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    color:#087fc1;
+    border:1px solid #b9dfea;
+    background:white;
+}
+
+.btn-outline:hover{
+    background:#effaff;
+}
+
+/* Floating circles */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    opacity:.55;
+}
+
+.circle-one{
+    width:180px;
+    height:180px;
+    left:-80px;
+    top:80px;
+    background:#d9f5f8;
+}
+
+.circle-two{
+    width:220px;
+    height:220px;
+    right:-90px;
+    bottom:30px;
+    background:#e5f7eb;
+}
+
+.circle-three{
+    width:80px;
+    height:80px;
+    left:18%;
+    bottom:50px;
+    background:#e2f1fb;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:85px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:30px;
+    color:#123a56;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    max-width:700px;
+    margin:0 auto 45px;
+    text-align:center;
+    color:#78909f;
+    font-size:13px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content h3{
+    color:#087fc1;
+    margin-bottom:18px;
+    font-size:19px;
+}
+
+.about-content p{
+    color:#718696;
+    font-size:14px;
+    margin-bottom:14px;
+}
+
+.principle{
+    margin-top:28px;
+    color:#087fc1;
+    font-weight:bold;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px 22px;
+    border-radius:14px;
+    border:1px solid #e5eef2;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 8px 25px rgba(20,70,100,.05);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(20,90,130,.12);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#edf9fc;
+    font-size:25px;
+}
+
+.card h3{
+    color:#173b57;
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#788d9c;
+    font-size:12px;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    background:#f0faff;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.step{
+    text-align:center;
+}
+
+.number{
+    width:45px;
+    height:45px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:bold;
+    background:linear-gradient(135deg,#087fc1,#43b96b);
+}
+
+.step h3{
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#78909f;
+    font-size:11px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+    background:white;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.why-card{
+    padding:30px 18px;
+    text-align:center;
+    border-radius:14px;
+    background:#f8fcfd;
+    border:1px solid #e4eef2;
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-6px);
+}
+
+.why-card .icon{
+    background:#eaf8ef;
+}
+
+.why-card h3{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:#788d9c;
+    font-size:11px;
+}
+
+/* ================= GLOBAL ================= */
+
+.global{
+    background:
+    linear-gradient(135deg,#073b5d,#087fc1);
+    color:white;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.global h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.global p{
+    max-width:700px;
+    margin:auto;
+    color:#d9edf6;
+    font-size:14px;
+}
+
+.global-globe{
+    margin:35px auto 0;
+    width:180px;
+    height:180px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:50%;
+    position:relative;
+}
+
+.global-globe:before,
+.global-globe:after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:50%;
+}
+
+.global-globe:before{
+    inset:25px;
+}
+
+.global-globe:after{
+    left:-25px;
+    right:-25px;
+    top:70px;
+    bottom:70px;
+}
+
+/* ================= MISSION ================= */
+
+.mission{
+    background:#f7fbfd;
+}
+
+.mv{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.mv-card{
+    background:white;
+    border:1px solid #e5eef2;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+}
+
+.mv-card h3{
+    color:#087fc1;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.mv-card p{
+    color:#748998;
+    font-size:13px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:linear-gradient(135deg,#006da9,#043f70);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#d9edf6;
+    margin-bottom:25px;
+    font-size:13px;
+}
+
+.cta .btn{
+    background:white;
+    color:#006da9;
+}
+
+.email{
+    margin-top:20px;
+    font-size:13px;
+    color:#d5edf7;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#062944;
+    color:white;
+    text-align:center;
+    padding:40px 20px 25px;
+}
+
+.footer-logo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.footer-logo span{
+    color:#43b96b;
+}
+
+.footer-line{
+    font-size:10px;
+    color:#9bb8c8;
+    letter-spacing:1px;
+}
+
+.footer-tagline{
+    margin-top:15px;
+    color:#d5e9f1;
+    font-size:11px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:25px;
+    padding-top:18px;
+    color:#7895a7;
+    font-size:9px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        padding:14px 17px;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .nav{
+        gap:12px;
+    }
+
+    .nav a{
+        font-size:9px;
+    }
+
+    .hero{
+        min-height:570px;
+    }
+
+    .hero-content{
+        padding:70px 18px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:2px;
+    }
+
+    .tagline{
+        font-size:15px;
+    }
+
+    .hero p{
+        font-size:11px;
+        line-height:1.8;
+    }
+
+    section{
+        padding:60px 15px;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
+    .section-subtitle{
+        font-size:11px;
+        margin-bottom:30px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .card{
+        padding:22px 10px;
+    }
+
+    .icon{
+        width:42px;
+        height:42px;
+        font-size:19px;
+        margin-bottom:12px;
+    }
+
+    .card h3{
+        font-size:11px;
+    }
+
+    .card p{
+        font-size:9px;
+    }
+
+    .steps{
+        grid-template-columns:repeat(5,1fr);
+        gap:3px;
+    }
+
+    .number{
+        width:32px;
+        height:32px;
+        font-size:10px;
+    }
+
+    .step h3{
+        font-size:8px;
+    }
+
+    .step p{
+        font-size:7px;
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .why-card{
+        padding:22px 9px;
+    }
+
+    .why-card h3{
+        font-size:11px;
+    }
+
+    .why-card p{
+        font-size:9px;
+    }
+
+    .mv{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .mv-card{
+        padding:28px 18px;
+    }
+
+    .global h2,
+    .cta h2{
+        font-size:25px;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .nav{
+        gap:8px;
+    }
+
+    .nav a{
+        font-size:8px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .cards{
+        gap:8px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="logo">
+RITU<span>V</span>AYA
+</a>
+
+<nav class="nav">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="circle circle-one"></div>
+<div class="circle circle-two"></div>
+<div class="circle circle-three"></div>
+
+<div class="hero-content">
+
+<div class="badge">
+🌍 GLOBAL BUSINESS CONNECTIONS
+</div>
+
+<h1>
+RITU<span>V</span>AYA
+</h1>
+
+<div class="tagline">
+Connecting Possibilities Worldwide. 🌍
+</div>
+
+<p>
+We connect businesses with manufacturers, suppliers,
+service providers, business partners and opportunities
+across India and international markets.
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
+target="_blank"
+class="btn btn-primary">
+Start a Business Enquiry
+</a>
+
+<a href="#services" class="btn btn-outline">
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+Who We Are
+</h2>
+
+<p class="section-subtitle">
+Building meaningful connections between businesses,
+products, services and opportunities.
+</p>
+
+<div class="about-content">
+
+<h3>
+RITUVAYA — Connecting Businesses Worldwide
+</h3>
+
+<p>
+RITUVAYA is a business connection and sourcing platform
+focused on helping companies find suitable manufacturers,
+suppliers, service providers, business partners and
+commercial opportunities.
+</p>
+
+<p>
+Our approach is simple: understand the requirement,
+research suitable connections and help businesses
+move towards the right opportunity.
+</p>
+
+<div class="principle">
+Right Requirement → Right Connection → Right Opportunity
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+What We Do
+</h2>
+
+<p class="section-subtitle">
+Practical business connection and sourcing solutions
+for companies across different markets.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Global Sourcing</h3>
+<p>
+Find suitable products and suppliers across
+India and international markets.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏭</div>
+<h3>Manufacturer Connections</h3>
+<p>
+Connect with manufacturers suitable for
+specific business requirements.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>B2B Opportunities</h3>
+<p>
+Discover relevant commercial opportunities,
+partnerships and connections.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Technical Services</h3>
+<p>
+Connect businesses with technical and
+professional service providers.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔎</div>
+<h3>Supplier Matching</h3>
+<p>
+Requirement-based research to identify
+potential suppliers and partners.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Business Connections</h3>
+<p>
+Create meaningful business relationships
+for future growth.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHO WE WORK WITH -->
+
+<section class="about">
+
+<div class="container">
+
+<h2 class="section-title">
+Who We Work With
+</h2>
+
+<p class="section-subtitle">
+Connecting different types of businesses under one network.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">👥</div>
+<h3>Buyers & Businesses</h3>
+<p>
+Companies searching for products,
+suppliers and services.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏭</div>
+<h3>Manufacturers</h3>
+<p>
+Manufacturers looking for relevant
+business requirements.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📦</div>
+<h3>Suppliers & Distributors</h3>
+<p>
+Suppliers seeking new business
+connections and opportunities.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>Service Providers</h3>
+<p>
+Technical and professional service
+providers across industries.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>International Companies</h3>
+<p>
+Companies exploring opportunities
+across international markets.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Business Partners</h3>
+<p>
+Businesses looking for strategic
+partnerships and collaboration.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process" id="process">
+
+<div class="container">
+
+<h2 class="section-title">
+How RITUVAYA Works
+</h2>
+
+<p class="section-subtitle">
+A simple process designed to turn requirements
+into meaningful business connections.
+</p>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Share Requirement</h3>
+<p>Tell us what you need.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Understand</h3>
+<p>We understand the requirement.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Research</h3>
+<p>We identify suitable connections.</p>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Connect</h3>
+<p>Relevant businesses are connected.</p>
+</div>
+
+<div class="step">
+<div class="number">5</div>
+<h3>Opportunity</h3>
+<p>Connections can grow into opportunities.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY CHOOSE -->
+
+<section class="why">
+
+<div class="container">
+
+<h2 class="section-title">
+Why Choose RITUVAYA?
+</h2>
+
+<p class="section-subtitle">
+Focused on creating useful and meaningful business connections.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="icon">🌍</div>
+<h3>Global Reach</h3>
+<p>
+Connections across India and international markets.
+</p>
+</div>
+
+<div class="why-card">
+<div class="icon">🎯</div>
+<h3>Requirement Focused</h3>
+<p>
+We begin by understanding the actual requirement.
+</p>
+</div>
+
+<div class="why-card">
+<div class="icon">🤝</div>
+<h3>B2B Focus</h3>
+<p>
+Built around business-to-business relationships.
+</p>
+</div>
+
+<div class="why-card">
+<div class="icon">📈</div>
+<h3>Long-Term Vision</h3>
+<p>
+Focused on sustainable business opportunities.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GLOBAL NETWORK -->
+
+<section class="global">
+
+<div class="container">
+
+<h2>
+Connecting India With The World 🌍
+</h2>
+
+<p>
+RITUVAYA aims to make it easier for businesses to
+discover products, suppliers, services, partners and
+opportunities across borders.
+</p>
+
+<div class="global-globe"></div>
+
+</div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="mission">
+
+<div class="container">
+
+<div class="mv">
+
+<div class="mv-card">
+
+<h3>
+Our Mission
+</h3>
+
+<p>
+To make business connections simpler by helping
+the right businesses find the right products,
+suppliers, service providers, partners and
+opportunities.
+</p>
+
+</div>
+
+<div class="mv-card">
+
+<h3>
+Our Vision
+</h3>
+
+<p>
+To build RITUVAYA into a trusted global business
+connection platform where companies can discover
+and connect with opportunities across borders.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+<div class="container">
+
+<h2>
+Let's Connect 🌍
+</h2>
+
+<p>
+Have a business requirement?
+Let's explore the right connection for you.
+</p>
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
+target="_blank"
+class="btn">
+Submit Business Enquiry
+</a>
+
+<div class="email">
+rituvaya.connect@gmail.com
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+RITU<span>V</span>AYA
+</div>
+
+<div class="footer-line">
+BUSINESS CONNECTIONS & SOURCING
+</div>
+
+<div class="footer-tagline">
+Connecting Possibilities Worldwide. 🌍
+</div>
+
+<div class="copyright">
+© 2026 RITUVAYA. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+  </html>
