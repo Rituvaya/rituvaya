@@ -8,7 +8,31 @@
 
 <meta name="description" content="RITUVAYA connects businesses with manufacturers, suppliers, service providers and business opportunities worldwide.">
 
-<style>
+<style> /* ===== SCROLL ANIMATION ===== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card{
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(8,127,193,0.12);
+}
 
 *{
     margin:0;
@@ -1190,6 +1214,21 @@ Connecting Possibilities Worldwide. 🌍
 </div>
 
 </footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
 
+document.querySelectorAll("section, .card").forEach((el) => {
+    el.classList.add("hidden");
+    observer.observe(el);
+});
+</script>
 </body>
   </html>
