@@ -965,6 +965,142 @@ footer{
     }
 
 }
+/* ===== INDUSTRIES WE SERVE ===== */
+
+.industries{
+    background:
+    radial-gradient(circle at 10% 20%,#e8f8fc,transparent 30%),
+    radial-gradient(circle at 90% 80%,#eaf8ef,transparent 30%),
+    #ffffff;
+}
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    max-width:1050px;
+    margin:auto;
+}
+
+.industry-card{
+    background:#f8fcfd;
+    border:1px solid #e3eef2;
+    border-radius:16px;
+    padding:28px 18px;
+    text-align:center;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.industry-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:3px;
+    background:linear-gradient(90deg,#087fc1,#43b96b);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s ease;
+}
+
+.industry-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(20,90,130,.12);
+    border-color:#cfe5ec;
+}
+
+.industry-card:hover::before{
+    transform:scaleX(1);
+}
+
+.industry-icon{
+    width:58px;
+    height:58px;
+    margin:0 auto 16px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eaf8fc;
+    font-size:25px;
+    box-shadow:0 7px 20px rgba(8,127,193,.08);
+    transition:.35s ease;
+}
+
+.industry-card:hover .industry-icon{
+    transform:scale(1.08) rotate(3deg);
+}
+
+.industry-card h3{
+    color:#173b57;
+    font-size:15px;
+    margin-bottom:9px;
+}
+
+.industry-card p{
+    color:#788d9c;
+    font-size:11px;
+    line-height:1.7;
+}
+
+
+/* ===== INDUSTRIES MOBILE ===== */
+
+@media(max-width:800px){
+
+    .industry-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .industry-card{
+        padding:22px 10px;
+        border-radius:13px;
+    }
+
+    .industry-icon{
+        width:44px;
+        height:44px;
+        font-size:19px;
+        margin-bottom:11px;
+    }
+
+    .industry-card h3{
+        font-size:11px;
+    }
+
+    .industry-card p{
+        font-size:9px;
+        line-height:1.6;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .industry-grid{
+        gap:8px;
+    }
+
+    .industry-card{
+        padding:19px 8px;
+    }
+
+    .industry-card h3{
+        font-size:10px;
+    }
+
+    .industry-card p{
+        font-size:8px;
+    }
+
+}
 </style>
 </head>
 
@@ -1416,7 +1552,79 @@ Submit Your Requirement
 
 </section>
 
+<!-- INDUSTRIES WE SERVE -->
 
+<section class="industries">
+
+<div class="container">
+
+<h2 class="section-title">
+Industries We Serve
+</h2>
+
+<p class="section-subtitle">
+Connecting businesses across industries through the right
+products, suppliers, services and opportunities.
+</p>
+
+<div class="industry-grid">
+
+<div class="industry-card">
+<div class="industry-icon">⚡</div>
+<h3>Energy & Power</h3>
+<p>Business connections across the energy and power sector.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">🏭</div>
+<h3>Manufacturing</h3>
+<p>Manufacturers, suppliers and industrial business connections.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">☀️</div>
+<h3>Solar & Renewable Energy</h3>
+<p>Connections for renewable energy products and solutions.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">💻</div>
+<h3>Technology & IT</h3>
+<p>Technology companies, solutions and professional services.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">⚙️</div>
+<h3>Engineering & Industrial</h3>
+<p>Engineering products, equipment and technical services.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">📦</div>
+<h3>Trading & Distribution</h3>
+<p>Suppliers, distributors and commercial opportunities.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">🏗️</div>
+<h3>Infrastructure & Construction</h3>
+<p>Business connections across infrastructure and construction.</p>
+</div>
+
+<div class="industry-card">
+<div class="industry-icon">🌐</div>
+<h3>Other Industries</h3>
+<p>Exploring opportunities across diverse business sectors.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GLOBAL NETWORK -->
 <!-- GLOBAL NETWORK -->
 
 <section class="global">
