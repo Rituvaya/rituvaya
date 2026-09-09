@@ -711,7 +711,82 @@ footer{
     }
 
 }
+/* ===== PREMIUM SCROLL ANIMATION ===== */
 
+.hidden{
+    opacity:0;
+    transform:translateY(50px) scale(0.97);
+    filter:blur(4px);
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.22,1,.36,1),
+        filter 0.9s ease;
+}
+
+/* Card animation */
+.card.hidden,
+.why-card.hidden,
+.mv-card.hidden{
+    transform:translateY(35px) scale(.96);
+}
+
+.card.show,
+.why-card.show,
+.mv-card.show{
+    transform:translateY(0) scale(1);
+}
+
+/* Smooth hover */
+.card,
+.why-card,
+.mv-card{
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+/* Stagger effect */
+.card:nth-child(1){transition-delay:.05s;}
+.card:nth-child(2){transition-delay:.10s;}
+.card:nth-child(3){transition-delay:.15s;}
+.card:nth-child(4){transition-delay:.20s;}
+.card:nth-child(5){transition-delay:.25s;}
+.card:nth-child(6){transition-delay:.30s;}
+
+/* Floating background animation */
+.circle-one{
+    animation:floatOne 7s ease-in-out infinite;
+}
+
+.circle-two{
+    animation:floatTwo 9s ease-in-out infinite;
+}
+
+.circle-three{
+    animation:floatThree 6s ease-in-out infinite;
+}
+
+@keyframes floatOne{
+    0%,100%{transform:translate(0,0);}
+    50%{transform:translate(25px,20px);}
+}
+
+@keyframes floatTwo{
+    0%,100%{transform:translate(0,0);}
+    50%{transform:translate(-25px,-25px);}
+}
+
+@keyframes floatThree{
+    0%,100%{transform:translate(0,0);}
+    50%{transform:translate(15px,-20px);}
+    }
+    
 </style>
 </head>
 
