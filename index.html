@@ -833,6 +833,138 @@ footer{
         transform:translateY(0);
     }
 }  
+/* ===== SUPPLIER MATCHING ===== */
+
+.matching{
+    background:
+    radial-gradient(circle at 10% 20%,#e8f8fc,transparent 30%),
+    radial-gradient(circle at 90% 80%,#eaf8ef,transparent 30%),
+    #f7fbfd;
+}
+
+.matching-box{
+    max-width:850px;
+    margin:auto;
+    padding:50px 45px;
+    background:white;
+    border:1px solid #dfeef3;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(20,70,100,.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.matching-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:5px;
+    background:linear-gradient(90deg,#087fc1,#43b96b);
+}
+
+.matching-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eaf8fc;
+    font-size:32px;
+    box-shadow:0 8px 25px rgba(8,127,193,.12);
+}
+
+.matching-box h3{
+    color:#123a56;
+    font-size:23px;
+    margin-bottom:14px;
+}
+
+.matching-box > p{
+    max-width:650px;
+    margin:0 auto 30px;
+    color:#718696;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.matching-points{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:30px 0;
+}
+
+.matching-points > div{
+    padding:18px;
+    border:1px solid #e5eef2;
+    border-radius:12px;
+    background:#f8fcfd;
+    text-align:left;
+    transition:.35s;
+}
+
+.matching-points > div:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(20,90,130,.10);
+}
+
+.matching-points strong{
+    display:block;
+    color:#173b57;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.matching-points span{
+    display:block;
+    color:#78909f;
+    font-size:10px;
+    padding-left:24px;
+}
+
+.matching-box .btn{
+    margin-top:5px;
+}
+
+
+/* ===== SUPPLIER MATCHING MOBILE ===== */
+
+@media(max-width:800px){
+
+    .matching-box{
+        padding:40px 18px;
+        border-radius:17px;
+    }
+
+    .matching-icon{
+        width:58px;
+        height:58px;
+        font-size:26px;
+    }
+
+    .matching-box h3{
+        font-size:18px;
+    }
+
+    .matching-box > p{
+        font-size:11px;
+    }
+
+    .matching-points{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .matching-points > div{
+        padding:15px;
+    }
+
+}
 </style>
 </head>
 
