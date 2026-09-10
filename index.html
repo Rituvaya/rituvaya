@@ -2125,6 +2125,21 @@ document.querySelectorAll("section, .card").forEach((el) => {
 
     </div>
 
-</div>
+<script>
+
+// ===== BUSINESS ENQUIRY POPUP =====
+
+function openEnquiry(){
+    document.getElementById("enquiryModal").classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeEnquiry(){
+    document.getElementById("enquiryModal").classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+</script>
+
 </body>
-  </html>
+</html>
