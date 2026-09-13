@@ -2161,6 +2161,95 @@ function closeEnquiry(){
     document.body.style.overflow = "";
 }
 
+
+// ===== GOOGLE FORM SUBMISSION =====
+
+document.getElementById("enquiryForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const form = this;
+
+    const inputs = form.querySelectorAll("input");
+    const textareas = form.querySelectorAll("textarea");
+
+    // Hidden iframe
+    let iframe = document.getElementById("googleFormFrame");
+
+    if(!iframe){
+
+        iframe = document.createElement("iframe");
+
+        iframe.id = "googleFormFrame";
+        iframe.name = "googleFormFrame";
+        iframe.style.display = "none";
+
+        document.body.appendChild(iframe);
+    }
+
+    // Create Google Form
+    const googleForm = document.createElement("form");
+
+    googleForm.method = "POST";
+
+    googleForm.action =
+    "https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/formResponse";
+
+    googleForm.target = "googleFormFrame";
+
+    const fields = [
+
+        ["entry.1111324147", inputs[0].value],
+        ["entry.1652586106", inputs[1].value],
+        ["entry.976028259", inputs[2].value],
+        ["entry.1238825223", inputs[3].value],
+
+        ["entry.1983571524", inputs[5].value],
+
+        ["entry.475730333", textareas[0].value],
+        ["entry.1498088326", textareas[1].value],
+
+        ["entry.592986264", inputs[4].value],
+
+        ["entry.1834524077", inputs[6].value],
+
+        ["entry.584578148", textareas[2].value]
+
+    ];
+
+    fields.forEach(function(field){
+
+        const input = document.createElement("input");
+
+        input.type = "hidden";
+        input.name = field[0];
+        input.value = field[1];
+
+        googleForm.appendChild(input);
+
+    });
+
+    document.body.appendChild(googleForm);
+
+    googleForm.submit();
+
+    // Reset popup form
+    form.reset();
+
+    closeEnquiry();
+
+    alert(
+        "Thank you! Your business enquiry has been submitted successfully. ✓"
+    );
+
+    setTimeout(function(){
+
+        googleForm.remove();
+
+    }, 2000);
+
+});
+
 </script>
 
 </body>
