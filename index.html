@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RITUVAYA | Connecting Possibilities Worldwide</title>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="description" content="RITUVAYA connects businesses with manufacturers, suppliers, service providers and business opportunities worldwide.">
+<title>
+RITUVAYA | Connecting Possibilities Worldwide
+</title>
 
-<style> /* ===== SCROLL ANIMATION ===== */
+<meta
+    name="description"
+    content="RITUVAYA connects businesses with manufacturers, suppliers, service providers, business partners and opportunities across India and international markets."
+>
 
-.hidden{
-    opacity:0;
-    transform:translateY(45px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
+<meta
+    name="keywords"
+    content="RITUVAYA, Global Sourcing, Supplier Matching, B2B Business, Business Connections, Manufacturer Sourcing, International Trade"
+>
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
+<meta
+    name="author"
+    content="RITUVAYA"
+>
 
-.card{
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
+<style>
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(8,127,193,0.12);
-}
+/* =====================================================
+   RITUVAYA — PREMIUM WEBSITE
+   GLOBAL BUSINESS CONNECTIONS & SOURCING
+   ===================================================== */
+
+
+/* ===== GLOBAL ===== */
 
 *{
     margin:0;
@@ -45,905 +50,2369 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7fbfd;
-    color:#102f49;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:#ffffff;
+
+    color:#173b57;
+
     line-height:1.6;
+
+    overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
 }
 
-/* ================= HEADER ================= */
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+
+/* ===== PREMIUM SCROLL ANIMATION ===== */
+
+.hidden{
+    opacity:0;
+
+    transform:
+        translateY(50px)
+        scale(.97);
+
+    filter:blur(4px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s cubic-bezier(.22,1,.36,1),
+        filter .9s ease;
+}
+
+.show{
+    opacity:1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    filter:blur(0);
+}
+
+.card.hidden,
+.why-card.hidden,
+.mv-card.hidden,
+.industry-card.hidden{
+    transform:
+        translateY(35px)
+        scale(.96);
+}
+
+.card.show,
+.why-card.show,
+.mv-card.show,
+.industry-card.show{
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ===== HEADER ===== */
 
 header{
     position:sticky;
+
     top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.96);
-    border-bottom:1px solid #e6eef2;
-    backdrop-filter:blur(12px);
+
+    z-index:999;
+
+    background:
+        rgba(255,255,255,.94);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:
+        1px solid #e5eef2;
+
+    box-shadow:
+        0 5px 25px rgba(20,70,100,.06);
 }
 
 .navbar{
-    max-width:1150px;
-    margin:auto;
-    padding:16px 22px;
+    min-height:76px;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
 }
 
+
+/* ===== LOGO ===== */
+
 .logo{
-    font-size:23px;
+    font-size:25px;
+
     font-weight:800;
-    letter-spacing:1px;
+
+    letter-spacing:2px;
+
     color:#087fc1;
+
+    white-space:nowrap;
 }
 
 .logo span{
     color:#43b96b;
 }
 
-.nav{
+
+/* ===== NAVIGATION ===== */
+
+.nav-links{
     display:flex;
-    gap:25px;
-}
 
-.nav a{
-    color:#526a7b;
-    font-size:13px;
-    font-weight:500;
-}
-
-.nav a:hover{
-    color:#087fc1;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    position:relative;
-    overflow:hidden;
-    min-height:650px;
-    display:flex;
     align-items:center;
-    text-align:center;
-    background:
-    radial-gradient(circle at 10% 20%,#dff7fb,transparent 28%),
-    radial-gradient(circle at 90% 30%,#e3f7e9,transparent 30%),
-    linear-gradient(135deg,#ffffff,#effaff);
+
+    gap:30px;
 }
 
-.hero-content{
-    width:100%;
-    max-width:850px;
-    margin:auto;
-    padding:80px 20px;
-    position:relative;
-    z-index:3;
-}
+.nav-links a{
+    color:#426275;
 
-.badge{
-    display:inline-block;
-    padding:8px 16px;
-    border-radius:30px;
-    background:#e7f8fc;
-    color:#087fc1;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:22px;
-}
+    font-size:13px;
 
-.hero h1{
-    font-size:64px;
-    letter-spacing:3px;
-    color:#102f49;
-    margin-bottom:8px;
-}
-
-.hero h1 span{
-    color:#43b96b;
-}
-
-.tagline{
-    font-size:20px;
-    color:#087fc1;
     font-weight:600;
-    margin-bottom:18px;
+
+    position:relative;
+
+    transition:.3s ease;
 }
 
-.hero p{
-    max-width:700px;
-    margin:auto;
-    color:#708596;
-    font-size:14px;
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087fc1,
+            #43b96b
+        );
+
+    transition:.3s ease;
 }
 
-.hero-buttons{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
+.nav-links a:hover{
+    color:#087fc1;
 }
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+
+/* ===== BUTTONS ===== */
 
 .btn{
-    display:inline-block;
-    padding:14px 23px;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:bold;
-    transition:.3s;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:13px 22px;
+
+    border-radius:9px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    border:none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
 }
 
 .btn-primary{
-    background:#087fc1;
-    color:white;
-    box-shadow:0 8px 25px rgba(8,127,193,.25);
+    color:#ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fc1,
+            #43b96b
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(8,127,193,.18);
 }
 
 .btn-primary:hover{
     transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(8,127,193,.25);
 }
 
 .btn-outline{
     color:#087fc1;
-    border:1px solid #b9dfea;
-    background:white;
+
+    background:#ffffff;
+
+    border:
+        1px solid #bcdce8;
 }
 
 .btn-outline:hover{
-    background:#effaff;
+    transform:translateY(-3px);
+
+    background:#f2fafc;
 }
 
-/* Floating circles */
 
-.circle{
+/* ===== HERO ===== */
+
+.hero{
+    min-height:
+        calc(100vh - 76px);
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #e9f8fc,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #eaf8ef,
+            transparent 35%
+        ),
+        #ffffff;
+}
+
+.hero::before{
+    content:"";
+
     position:absolute;
+
+    width:600px;
+    height:600px;
+
+    border:
+        1px solid
+        rgba(8,127,193,.08);
+
     border-radius:50%;
-    opacity:.55;
+
+    right:-260px;
+    top:-180px;
+
+    animation:
+        rotateHero 25s linear infinite;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border:
+        1px solid
+        rgba(67,185,107,.08);
+
+    border-radius:50%;
+
+    left:-250px;
+    bottom:-220px;
+
+    animation:
+        rotateHeroReverse 20s linear infinite;
+}
+
+@keyframes rotateHero{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+@keyframes rotateHeroReverse{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+
+}
+
+.hero-content{
+    max-width:760px;
+
+    position:relative;
+
+    z-index:2;
+
+    animation:
+        heroContentIn
+        1.2s
+        cubic-bezier(.22,1,.36,1)
+        both;
+}
+
+.badge{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #dcecf1;
+
+    color:#087fc1;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 8px 25px
+        rgba(20,80,110,.07);
+
+    animation:
+        heroItemIn
+        .8s
+        ease
+        .2s
+        both;
+}
+
+.hero h1{
+    margin-top:22px;
+
+    font-size:
+        clamp(45px,8vw,82px);
+
+    line-height:1;
+
+    letter-spacing:2px;
+
+    color:#123a56;
+
+    animation:
+        heroItemIn
+        1s
+        ease
+        .35s
+        both;
+}
+
+.hero h1 span{
+    color:#087fc1;
+}
+
+.tagline{
+    margin-top:18px;
+
+    font-size:
+        clamp(18px,3vw,28px);
+
+    font-weight:700;
+
+    color:#43b96b;
+
+    animation:
+        heroItemIn
+        1s
+        ease
+        .5s
+        both;
+}
+
+.hero p{
+    max-width:680px;
+
+    margin-top:18px;
+
+    color:#6f8492;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    animation:
+        heroItemIn
+        1s
+        ease
+        .65s
+        both;
+}
+
+.hero-buttons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:30px;
+
+    animation:
+        heroItemIn
+        1s
+        ease
+        .8s
+        both;
+}
+
+@keyframes heroContentIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(35px)
+            scale(.96);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+@keyframes heroItemIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* ===== FLOATING HERO ORBS ===== */
+
+.circle-one,
+.circle-two,
+.circle-three{
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
 }
 
 .circle-one{
-    width:180px;
-    height:180px;
-    left:-80px;
-    top:80px;
-    background:#d9f5f8;
+    width:90px;
+    height:90px;
+
+    right:15%;
+    top:20%;
+
+    background:
+        rgba(8,127,193,.08);
+
+    animation:
+        floatOne
+        7s
+        ease-in-out
+        infinite;
 }
 
 .circle-two{
-    width:220px;
-    height:220px;
-    right:-90px;
-    bottom:30px;
-    background:#e5f7eb;
+    width:130px;
+    height:130px;
+
+    right:8%;
+    bottom:12%;
+
+    background:
+        rgba(67,185,107,.08);
+
+    animation:
+        floatTwo
+        9s
+        ease-in-out
+        infinite;
 }
 
 .circle-three{
-    width:80px;
-    height:80px;
-    left:18%;
-    bottom:50px;
-    background:#e2f1fb;
+    width:55px;
+    height:55px;
+
+    right:30%;
+    bottom:18%;
+
+    background:
+        rgba(8,127,193,.07);
+
+    animation:
+        floatThree
+        6s
+        ease-in-out
+        infinite;
 }
 
-/* ================= SECTION ================= */
+@keyframes floatOne{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(25px,20px);
+    }
+
+}
+
+@keyframes floatTwo{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-25px,-25px);
+    }
+
+}
+
+@keyframes floatThree{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(15px,-20px);
+    }
+
+}
+
+
+/* ===== SECTIONS ===== */
 
 section{
-    padding:85px 20px;
-}
+    padding:95px 0;
 
-.container{
-    max-width:1150px;
-    margin:auto;
+    position:relative;
 }
 
 .section-title{
     text-align:center;
-    font-size:30px;
+
     color:#123a56;
-    margin-bottom:10px;
+
+    font-size:
+        clamp(28px,4vw,40px);
+
+    margin-bottom:12px;
 }
 
 .section-subtitle{
     max-width:700px;
-    margin:0 auto 45px;
+
+    margin:
+        0 auto 45px;
+
     text-align:center;
+
     color:#78909f;
+
     font-size:13px;
+
+    line-height:1.8;
 }
 
-/* ================= ABOUT ================= */
+
+/* ===== ABOUT ===== */
 
 .about{
-    background:white;
+    background:#ffffff;
 }
 
-.about-content{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-content h3{
-    color:#087fc1;
-    margin-bottom:18px;
-    font-size:19px;
-}
-
-.about-content p{
-    color:#718696;
-    font-size:14px;
-    margin-bottom:14px;
-}
-
-.principle{
-    margin-top:28px;
-    color:#087fc1;
-    font-weight:bold;
-}
-
-/* ================= CARDS ================= */
-
-.cards{
+.about-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:30px;
+
+    max-width:1050px;
+
+    margin:auto;
+}
+
+.about-card{
+    padding:35px;
+
+    border:
+        1px solid #e3eef2;
+
+    border-radius:20px;
+
+    background:#f9fcfd;
+
+    transition:.4s ease;
+}
+
+.about-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(20,90,130,.10);
+}
+
+.about-card h3{
+    color:#173b57;
+
+    font-size:19px;
+
+    margin-bottom:13px;
+}
+
+.about-card p{
+    color:#728795;
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+
+/* ===== SERVICES ===== */
+
+.services{
+    background:
+        linear-gradient(
+            180deg,
+            #f8fcfd,
+            #ffffff
+        );
+}
+
+.card-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
+
+    max-width:1080px;
+
+    margin:auto;
 }
 
 .card{
-    background:white;
     padding:30px 22px;
-    border-radius:14px;
-    border:1px solid #e5eef2;
+
+    background:#ffffff;
+
+    border:
+        1px solid #e1edf1;
+
+    border-radius:18px;
+
     text-align:center;
-    transition:.35s;
-    box-shadow:0 8px 25px rgba(20,70,100,.05);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease,
+        border-color .4s ease;
+}
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087fc1,
+            #43b96b
+        );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s ease;
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(20,90,130,.12);
+
+    border-color:#cfe5ec;
+
+    box-shadow:
+        0 18px 40px
+        rgba(20,90,130,.11);
 }
 
-.icon{
-    width:55px;
-    height:55px;
-    margin:0 auto 18px;
+.card:hover::before{
+    transform:scaleX(1);
+}
+
+.card-icon{
+    width:62px;
+    height:62px;
+
+    margin:
+        0 auto 18px;
+
     border-radius:50%;
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
-    background:#edf9fc;
-    font-size:25px;
+    justify-content:center;
+
+    background:#eaf8fc;
+
+    font-size:27px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(8,127,193,.08);
 }
 
 .card h3{
     color:#173b57;
+
     font-size:16px;
+
     margin-bottom:10px;
 }
 
 .card p{
-    color:#788d9c;
-    font-size:12px;
+    color:#78909f;
+
+    font-size:11px;
+
+    line-height:1.7;
 }
 
-/* ================= PROCESS ================= */
 
-.process{
-    background:#f0faff;
+/* ===== WHO WE WORK WITH ===== */
+
+.work-with{
+    background:#ffffff;
 }
 
-.steps{
+.work-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:15px;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    max-width:1050px;
+
+    margin:auto;
 }
 
-.step{
+.work-card{
+    padding:25px 20px;
+
+    background:
+        #f8fcfd;
+
+    border:
+        1px solid #e2edf1;
+
+    border-radius:16px;
+
     text-align:center;
+
+    transition:.35s ease;
 }
 
-.number{
-    width:45px;
-    height:45px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-weight:bold;
-    background:linear-gradient(135deg,#087fc1,#43b96b);
+.work-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(20,90,130,.09);
 }
 
-.step h3{
+.work-card .icon{
+    font-size:27px;
+
+    margin-bottom:12px;
+}
+
+.work-card h3{
     font-size:14px;
+
+    color:#173b57;
+
     margin-bottom:7px;
 }
 
-.step p{
-    color:#78909f;
-    font-size:11px;
+.work-card p{
+    color:#7b8f9d;
+
+    font-size:10px;
+
+    line-height:1.6;
 }
 
-/* ================= WHY ================= */
+
+/* ===== HOW IT WORKS ===== */
+
+.process{
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #e8f8fc,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #eaf8ef,
+            transparent 30%
+        ),
+        #f8fcfd;
+}
+
+.process-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:12px;
+
+    max-width:1100px;
+
+    margin:auto;
+}
+
+.process-step{
+    text-align:center;
+
+    position:relative;
+}
+
+.process-number{
+    width:55px;
+    height:55px;
+
+    margin:
+        0 auto 15px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fc1,
+            #43b96b
+        );
+
+    color:#ffffff;
+
+    font-weight:800;
+
+    box-shadow:
+        0 10px 25px
+        rgba(8,127,193,.18);
+}
+
+.process-step h3{
+    color:#173b57;
+
+    font-size:13px;
+
+    margin-bottom:7px;
+}
+
+.process-step p{
+    color:#7b8f9d;
+
+    font-size:9px;
+
+    line-height:1.6;
+}
+
+
+/* ===== WHY CHOOSE ===== */
 
 .why{
-    background:white;
+    background:#ffffff;
 }
 
 .why-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
+
+    max-width:1050px;
+
+    margin:auto;
 }
 
 .why-card{
-    padding:30px 18px;
+    padding:28px 20px;
+
+    border:
+        1px solid #e1edf1;
+
+    border-radius:17px;
+
+    background:#fbfdfe;
+
     text-align:center;
-    border-radius:14px;
-    background:#f8fcfd;
-    border:1px solid #e4eef2;
-    transition:.3s;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
 }
 
 .why-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(20,90,130,.10);
 }
 
-.why-card .icon{
-    background:#eaf8ef;
+.why-card-icon{
+    font-size:28px;
+
+    margin-bottom:13px;
 }
 
 .why-card h3{
     font-size:14px;
-    margin-bottom:8px;
+
+    color:#173b57;
+
+    margin-bottom:7px;
 }
 
 .why-card p{
-    color:#788d9c;
-    font-size:11px;
+    font-size:10px;
+
+    color:#7b8f9d;
+
+    line-height:1.7;
 }
 
-/* ================= GLOBAL ================= */
 
-.global{
+/* ===== SUPPLIER MATCHING ===== */
+
+.matching{
     background:
-    linear-gradient(135deg,#073b5d,#087fc1);
-    color:white;
+        radial-gradient(
+            circle at 10% 20%,
+            #e8f8fc,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #eaf8ef,
+            transparent 30%
+        ),
+        #f7fbfd;
+}
+
+.matching-box{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:50px 45px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #dfeef3;
+
+    border-radius:22px;
+
     text-align:center;
+
+    box-shadow:
+        0 20px 50px
+        rgba(20,70,100,.08);
+
     position:relative;
+
     overflow:hidden;
 }
 
-.global h2{
+.matching-box::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087fc1,
+            #43b96b
+        );
+}
+
+.matching-icon{
+    width:70px;
+    height:70px;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#eaf8fc;
+
     font-size:32px;
-    margin-bottom:15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(8,127,193,.12);
 }
 
-.global p{
-    max-width:700px;
+.matching-box h3{
+    color:#123a56;
+
+    font-size:23px;
+
+    margin-bottom:14px;
+}
+
+.matching-box > p{
+    max-width:650px;
+
+    margin:
+        0 auto 30px;
+
+    color:#718696;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.matching-points{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin:30px 0;
+}
+
+.matching-points > div{
+    padding:18px;
+
+    border:
+        1px solid #e5eef2;
+
+    border-radius:12px;
+
+    background:#f8fcfd;
+
+    text-align:left;
+
+    transition:.35s;
+}
+
+.matching-points > div:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(20,90,130,.10);
+}
+
+.matching-points strong{
+    display:block;
+
+    color:#173b57;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+}
+
+.matching-points span{
+    display:block;
+
+    color:#78909f;
+
+    font-size:10px;
+
+    padding-left:24px;
+}
+
+
+/* ===== INDUSTRIES ===== */
+
+.industries{
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #e8f8fc,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #eaf8ef,
+            transparent 30%
+        ),
+        #ffffff;
+}
+
+.industry-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:18px;
+
+    max-width:1050px;
+
     margin:auto;
-    color:#d9edf6;
-    font-size:14px;
 }
 
-.global-globe{
-    margin:35px auto 0;
+.industry-card{
+    background:#f8fcfd;
+
+    border:
+        1px solid #e3eef2;
+
+    border-radius:16px;
+
+    padding:28px 18px;
+
+    text-align:center;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.industry-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087fc1,
+            #43b96b
+        );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s ease;
+}
+
+.industry-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(20,90,130,.12);
+
+    border-color:#cfe5ec;
+}
+
+.industry-card:hover::before{
+    transform:scaleX(1);
+}
+
+.industry-icon{
+    width:58px;
+    height:58px;
+
+    margin:
+        0 auto 16px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#eaf8fc;
+
+    font-size:25px;
+
+    box-shadow:
+        0 7px 20px
+        rgba(8,127,193,.08);
+
+    transition:.35s ease;
+}
+
+.industry-card:hover .industry-icon{
+    transform:
+        scale(1.08)
+        rotate(3deg);
+}
+
+.industry-card h3{
+    color:#173b57;
+
+    font-size:15px;
+
+    margin-bottom:9px;
+}
+
+.industry-card p{
+    color:#788d9c;
+
+    font-size:11px;
+
+    line-height:1.7;
+}
+
+
+/* ===== GLOBAL NETWORK ===== */
+
+.network{
+    background:#ffffff;
+
+    overflow:hidden;
+}
+
+.network-box{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:50px 35px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4fbfd,
+            #f4fbf6
+        );
+
+    border:
+        1px solid #dfedf1;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.network-globe{
     width:180px;
     height:180px;
-    border:1px solid rgba(255,255,255,.35);
+
+    margin:
+        0 auto 25px;
+
+    border:
+        2px solid
+        rgba(8,127,193,.25);
+
     border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:75px;
+
     position:relative;
+
+    animation:
+        globeFloat
+        5s
+        ease-in-out
+        infinite;
 }
 
-.global-globe:before,
-.global-globe:after{
+.network-globe::before,
+.network-globe::after{
     content:"";
+
     position:absolute;
-    border:1px solid rgba(255,255,255,.25);
+
+    border:
+        1px solid
+        rgba(67,185,107,.25);
+
     border-radius:50%;
 }
 
-.global-globe:before{
-    inset:25px;
+.network-globe::before{
+    width:230px;
+    height:80px;
+
+    transform:rotate(-25deg);
 }
 
-.global-globe:after{
-    left:-25px;
-    right:-25px;
-    top:70px;
-    bottom:70px;
+.network-globe::after{
+    width:230px;
+    height:80px;
+
+    transform:rotate(25deg);
 }
 
-/* ================= MISSION ================= */
+@keyframes globeFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+.network-box h3{
+    color:#123a56;
+
+    font-size:25px;
+
+    margin-bottom:10px;
+}
+
+.network-box p{
+    max-width:680px;
+
+    margin:auto;
+
+    color:#718696;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* ===== MISSION VISION ===== */
 
 .mission{
-    background:#f7fbfd;
+    background:
+        #f8fcfd;
 }
 
-.mv{
+.mv-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:22px;
+
+    max-width:1000px;
+
+    margin:auto;
 }
 
 .mv-card{
-    background:white;
-    border:1px solid #e5eef2;
-    border-radius:15px;
     padding:35px;
-    text-align:center;
+
+    background:#ffffff;
+
+    border:
+        1px solid #e1edf1;
+
+    border-radius:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+}
+
+.mv-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:5px;
+    height:100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #087fc1,
+            #43b96b
+        );
+}
+
+.mv-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(20,90,130,.10);
 }
 
 .mv-card h3{
-    color:#087fc1;
-    font-size:22px;
-    margin-bottom:15px;
-}
+    color:#123a56;
 
-.mv-card p{
-    color:#748998;
-    font-size:13px;
-}
+    font-size:20px;
 
-/* ================= CTA ================= */
-
-.cta{
-    background:linear-gradient(135deg,#006da9,#043f70);
-    color:white;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:32px;
     margin-bottom:12px;
 }
 
-.cta p{
-    color:#d9edf6;
-    margin-bottom:25px;
+.mv-card p{
+    color:#718696;
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+
+/* ===== PRINCIPLE ===== */
+
+.principle{
+    text-align:center;
+
+    padding:
+        60px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fc1,
+            #43b96b
+        );
+            );
+}
+
+.principle h2{
+    font-size:
+        clamp(25px,4vw,38px);
+
+    margin-bottom:15px;
+}
+
+.principle p{
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+/* ===== CTA ===== */
+
+.cta{
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #e8f8fc,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #eaf8ef,
+            transparent 30%
+        ),
+        #ffffff;
+
+    text-align:center;
+}
+
+.cta-box{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:55px 30px;
+
+    border:
+        1px solid #dfedf1;
+
+    border-radius:25px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 20px 50px
+        rgba(20,70,100,.08);
+}
+
+.cta-box h2{
+    color:#123a56;
+
+    font-size:
+        clamp(28px,5vw,42px);
+
+    margin-bottom:12px;
+}
+
+.cta-box p{
+    max-width:650px;
+
+    margin:
+        0 auto 25px;
+
+    color:#718696;
+
     font-size:13px;
+
+    line-height:1.8;
 }
 
-.cta .btn{
-    background:white;
-    color:#006da9;
-}
 
-.email{
-    margin-top:20px;
-    font-size:13px;
-    color:#d5edf7;
-}
-
-/* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
 
 footer{
-    background:#062944;
-    color:white;
-    text-align:center;
-    padding:40px 20px 25px;
+    background:#0e2d42;
+
+    color:#ffffff;
+
+    padding:
+        55px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap:40px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding-bottom:35px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.10);
 }
 
 .footer-logo{
-    font-size:22px;
-    font-weight:bold;
-    margin-bottom:8px;
+    font-size:25px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    color:#ffffff;
+
+    margin-bottom:7px;
 }
 
 .footer-logo span{
     color:#43b96b;
 }
 
-.footer-line{
-    font-size:10px;
-    color:#9bb8c8;
-    letter-spacing:1px;
-}
+.footer-brand p{
+    max-width:330px;
 
-.footer-tagline{
-    margin-top:15px;
-    color:#d5e9f1;
+    color:#9bb0bc;
+
     font-size:11px;
-}
 
-.copyright{
-    border-top:1px solid rgba(255,255,255,.1);
-    margin-top:25px;
-    padding-top:18px;
-    color:#7895a7;
-    font-size:9px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:800px){
-
-    .navbar{
-        padding:14px 17px;
-    }
-
-    .logo{
-        font-size:19px;
-    }
-
-    .nav{
-        gap:12px;
-    }
-
-    .nav a{
-        font-size:9px;
-    }
-
-    .hero{
-        min-height:570px;
-    }
-
-    .hero-content{
-        padding:70px 18px;
-    }
-
-    .hero h1{
-        font-size:43px;
-        letter-spacing:2px;
-    }
-
-    .tagline{
-        font-size:15px;
-    }
-
-    .hero p{
-        font-size:11px;
-        line-height:1.8;
-    }
-
-    section{
-        padding:60px 15px;
-    }
-
-    .section-title{
-        font-size:24px;
-    }
-
-    .section-subtitle{
-        font-size:11px;
-        margin-bottom:30px;
-    }
-
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .card{
-        padding:22px 10px;
-    }
-
-    .icon{
-        width:42px;
-        height:42px;
-        font-size:19px;
-        margin-bottom:12px;
-    }
-
-    .card h3{
-        font-size:11px;
-    }
-
-    .card p{
-        font-size:9px;
-    }
-
-    .steps{
-        grid-template-columns:repeat(5,1fr);
-        gap:3px;
-    }
-
-    .number{
-        width:32px;
-        height:32px;
-        font-size:10px;
-    }
-
-    .step h3{
-        font-size:8px;
-    }
-
-    .step p{
-        font-size:7px;
-    }
-
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .why-card{
-        padding:22px 9px;
-    }
-
-    .why-card h3{
-        font-size:11px;
-    }
-
-    .why-card p{
-        font-size:9px;
-    }
-
-    .mv{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .mv-card{
-        padding:28px 18px;
-    }
-
-    .global h2,
-    .cta h2{
-        font-size:25px;
-    }
-
-}
-
-@media(max-width:430px){
-
-    .nav{
-        gap:8px;
-    }
-
-    .nav a{
-        font-size:8px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .cards{
-        gap:8px;
-    }
-
-}
-/* ===== PREMIUM SCROLL ANIMATION ===== */
-
-.hidden{
-    opacity:0;
-    transform:translateY(50px) scale(0.97);
-    filter:blur(4px);
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0) scale(1);
-    filter:blur(0);
-    transition:
-        opacity 0.9s ease,
-        transform 0.9s cubic-bezier(.22,1,.36,1),
-        filter 0.9s ease;
-}
-
-/* Card animation */
-.card.hidden,
-.why-card.hidden,
-.mv-card.hidden{
-    transform:translateY(35px) scale(.96);
-}
-
-.card.show,
-.why-card.show,
-.mv-card.show{
-    transform:translateY(0) scale(1);
-}
-
-/* Smooth hover */
-.card,
-.why-card,
-.mv-card{
-    transition:
-        transform .4s ease,
-        box-shadow .4s ease;
-}
-
-/* Stagger effect */
-.card:nth-child(1){transition-delay:.05s;}
-.card:nth-child(2){transition-delay:.10s;}
-.card:nth-child(3){transition-delay:.15s;}
-.card:nth-child(4){transition-delay:.20s;}
-.card:nth-child(5){transition-delay:.25s;}
-.card:nth-child(6){transition-delay:.30s;}
-
-/* Floating background animation */
-.circle-one{
-    animation:floatOne 7s ease-in-out infinite;
-}
-
-.circle-two{
-    animation:floatTwo 9s ease-in-out infinite;
-}
-
-.circle-three{
-    animation:floatThree 6s ease-in-out infinite;
-}
-
-@keyframes floatOne{
-    0%,100%{transform:translate(0,0);}
-    50%{transform:translate(25px,20px);}
-}
-
-@keyframes floatTwo{
-    0%,100%{transform:translate(0,0);}
-    50%{transform:translate(-25px,-25px);}
-}
-
-@keyframes floatThree{
-    0%,100%{transform:translate(0,0);}
-    50%{transform:translate(15px,-20px);}
-    }
-/* ===== HERO ENTRANCE ANIMATION ===== */
-
-.hero-content{
-    animation:heroContentIn 1.2s cubic-bezier(.22,1,.36,1) both;
-}
-
-.badge{
-    animation:heroItemIn .8s ease .2s both;
-}
-
-.hero h1{
-    animation:heroItemIn 1s ease .35s both;
-}
-
-.tagline{
-    animation:heroItemIn 1s ease .5s both;
-}
-
-.hero p{
-    animation:heroItemIn 1s ease .65s both;
-}
-
-.hero-buttons{
-    animation:heroItemIn 1s ease .8s both;
-}
-
-@keyframes heroContentIn{
-    from{
-        opacity:0;
-        transform:translateY(35px) scale(.96);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-@keyframes heroItemIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}  
-/* ===== SUPPLIER MATCHING ===== */
-
-.matching{
-    background:
-    radial-gradient(circle at 10% 20%,#e8f8fc,transparent 30%),
-    radial-gradient(circle at 90% 80%,#eaf8ef,transparent 30%),
-    #f7fbfd;
-}
-
-.matching-box{
-    max-width:850px;
-    margin:auto;
-    padding:50px 45px;
-    background:white;
-    border:1px solid #dfeef3;
-    border-radius:22px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(20,70,100,.08);
-    position:relative;
-    overflow:hidden;
-}
-
-.matching-box::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:5px;
-    background:linear-gradient(90deg,#087fc1,#43b96b);
-}
-
-.matching-icon{
-    width:70px;
-    height:70px;
-    margin:0 auto 20px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#eaf8fc;
-    font-size:32px;
-    box-shadow:0 8px 25px rgba(8,127,193,.12);
-}
-
-.matching-box h3{
-    color:#123a56;
-    font-size:23px;
-    margin-bottom:14px;
-}
-
-.matching-box > p{
-    max-width:650px;
-    margin:0 auto 30px;
-    color:#718696;
-    font-size:13px;
     line-height:1.8;
 }
 
-.matching-points{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin:30px 0;
-}
-
-.matching-points > div{
-    padding:18px;
-    border:1px solid #e5eef2;
-    border-radius:12px;
-    background:#f8fcfd;
-    text-align:left;
-    transition:.35s;
-}
-
-.matching-points > div:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(20,90,130,.10);
-}
-
-.matching-points strong{
-    display:block;
-    color:#173b57;
+.footer-column h3{
     font-size:13px;
-    margin-bottom:5px;
+
+    margin-bottom:15px;
+
+    color:#ffffff;
 }
 
-.matching-points span{
+.footer-column a{
     display:block;
-    color:#78909f;
-    font-size:10px;
-    padding-left:24px;
+
+    color:#9bb0bc;
+
+    font-size:11px;
+
+    margin-bottom:9px;
+
+    transition:.3s ease;
 }
 
-.matching-box .btn{
+.footer-column a:hover{
+    color:#43b96b;
+
+    transform:translateX(3px);
+}
+
+.footer-bottom{
+    text-align:center;
+
+    padding-top:22px;
+
+    color:#8098a5;
+
+    font-size:10px;
+}
+
+.footer-tagline{
+    margin-top:5px;
+
+    color:#43b96b;
+}
+
+
+/* ===== ENQUIRY MODAL ===== */
+
+.enquiry-modal{
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(7,30,45,.72);
+
+    backdrop-filter:blur(9px);
+
+    -webkit-backdrop-filter:blur(9px);
+
+    z-index:9998;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+.enquiry-modal.active{
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+}
+
+.enquiry-box{
+    width:100%;
+
+    max-width:620px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    position:relative;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.25);
+
+    transform:
+        translateY(35px)
+        scale(.92);
+
+    transition:
+        transform .5s
+        cubic-bezier(.22,1,.36,1);
+}
+
+.enquiry-modal.active .enquiry-box{
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.enquiry-close{
+    position:absolute;
+
+    top:12px;
+    right:14px;
+
+    width:36px;
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f1f7f9;
+
+    color:#496574;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.enquiry-close:hover{
+    background:#e5f3f7;
+
+    color:#087fc1;
+
+    transform:rotate(90deg);
+}
+
+.enquiry-header{
+    text-align:center;
+
+    margin-bottom:25px;
+}
+
+.enquiry-icon{
+    width:65px;
+    height:65px;
+
+    margin:
+        0 auto 14px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f7fc,
+            #eaf8ef
+        );
+
+    font-size:28px;
+}
+
+.enquiry-header h2{
+    color:#123a56;
+
+    font-size:25px;
+
+    margin-bottom:8px;
+}
+
+.enquiry-header p{
+    color:#718696;
+
+    font-size:11px;
+
+    line-height:1.7;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+
+    color:#173b57;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+
+    border:
+        1px solid #dbe9ee;
+
+    border-radius:9px;
+
+    padding:12px 13px;
+
+    outline:none;
+
+    color:#173b57;
+
+    background:#fbfdfe;
+
+    font-size:11px;
+
+    transition:.3s ease;
+}
+
+.form-group textarea{
+    min-height:90px;
+
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#087fc1;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8,127,193,.08);
+}
+
+.form-row{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+}
+
+.enquiry-submit{
+    width:100%;
+
     margin-top:5px;
 }
 
 
-/* ===== SUPPLIER MATCHING MOBILE ===== */
+/* ===== PREMIUM SUCCESS MESSAGE ===== */
+
+.success-message{
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(7,30,45,.72);
+
+    backdrop-filter:blur(9px);
+
+    -webkit-backdrop-filter:blur(9px);
+
+    z-index:10000;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+.success-message.active{
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+}
+
+.success-box{
+    width:100%;
+
+    max-width:460px;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:42px 30px 32px;
+
+    text-align:center;
+
+    position:relative;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.25);
+
+    transform:
+        translateY(35px)
+        scale(.90);
+
+    transition:
+        transform .55s
+        cubic-bezier(.22,1,.36,1);
+}
+
+.success-message.active .success-box{
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.success-icon{
+    width:78px;
+    height:78px;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f7fc,
+            #eaf8ef
+        );
+
+    color:#43b96b;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 12px 30px
+        rgba(67,185,107,.18);
+
+    animation:
+        successPop
+        .65s
+        cubic-bezier(.22,1,.36,1)
+        .15s
+        both;
+}
+
+@keyframes successPop{
+
+    0%{
+        opacity:0;
+
+        transform:
+            scale(.4)
+            rotate(-15deg);
+    }
+
+    70%{
+        transform:
+            scale(1.12)
+            rotate(3deg);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+.success-box h2{
+    color:#123a56;
+
+    font-size:27px;
+
+    margin-bottom:12px;
+
+    animation:
+        successText
+        .6s
+        ease
+        .25s
+        both;
+}
+
+.success-box p{
+    color:#718696;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    margin-bottom:18px;
+
+    animation:
+        successText
+        .6s
+        ease
+        .35s
+        both;
+}
+
+.success-connect{
+    display:inline-block;
+
+    padding:12px 18px;
+
+    margin-bottom:20px;
+
+    border-radius:12px;
+
+    background:#f2faf6;
+
+    color:#173b57;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    animation:
+        successText
+        .6s
+        ease
+        .45s
+        both;
+}
+
+.success-box > span{
+    display:block;
+
+    color:#8999a4;
+
+    font-size:10px;
+
+    line-height:1.8;
+
+    animation:
+        successText
+        .6s
+        ease
+        .55s
+        both;
+}
+
+.success-box > span strong{
+    color:#087fc1;
+
+    font-weight:600;
+}
+
+@keyframes successText{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.success-close{
+    position:absolute;
+
+    top:13px;
+    right:15px;
+
+    width:36px;
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f1f7f9;
+
+    color:#496574;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.success-close:hover{
+    background:#e5f3f7;
+
+    color:#087fc1;
+
+    transform:rotate(90deg);
+}
+
+.success-done{
+    width:100%;
+
+    margin-top:22px;
+
+    border:none;
+
+    cursor:pointer;
+
+    animation:
+        successText
+        .6s
+        ease
+        .65s
+        both;
+}
+
+
+/* ===== MOBILE ===== */
 
 @media(max-width:800px){
 
+    .navbar{
+        min-height:68px;
+    }
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:
+            calc(100vh - 68px);
+
+        padding:
+            70px 0;
+    }
+
+    .hero p{
+        font-size:12px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .about-grid,
+    .mv-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .work-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .process-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:30px;
+    }
+
+    .why-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .industry-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:10px;
+    }
+
+    .industry-card{
+        padding:22px 10px;
+
+        border-radius:13px;
+    }
+
+    .industry-icon{
+        width:44px;
+        height:44px;
+
+        font-size:19px;
+
+        margin-bottom:11px;
+    }
+
+    .industry-card h3{
+        font-size:11px;
+    }
+
+    .industry-card p{
+        font-size:9px;
+
+        line-height:1.6;
+    }
+
     .matching-box{
         padding:40px 18px;
+
         border-radius:17px;
     }
 
     .matching-icon{
         width:58px;
         height:58px;
+
         font-size:26px;
     }
 
@@ -957,6 +2426,7 @@ footer{
 
     .matching-points{
         grid-template-columns:1fr;
+
         gap:10px;
     }
 
@@ -964,125 +2434,134 @@ footer{
         padding:15px;
     }
 
-}
-/* ===== INDUSTRIES WE SERVE ===== */
+    .footer-grid{
+        grid-template-columns:1fr;
 
-.industries{
-    background:
-    radial-gradient(circle at 10% 20%,#e8f8fc,transparent 30%),
-    radial-gradient(circle at 90% 80%,#eaf8ef,transparent 30%),
-    #ffffff;
+        gap:25px;
+    }
+
 }
 
-.industry-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    max-width:1050px;
-    margin:auto;
-}
+@media(max-width:600px){
 
-.industry-card{
-    background:#f8fcfd;
-    border:1px solid #e3eef2;
-    border-radius:16px;
-    padding:28px 18px;
-    text-align:center;
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
-    position:relative;
-    overflow:hidden;
-}
+    .container{
+        width:92%;
+    }
 
-.industry-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:3px;
-    background:linear-gradient(90deg,#087fc1,#43b96b);
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:.35s ease;
-}
-
-.industry-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(20,90,130,.12);
-    border-color:#cfe5ec;
-}
-
-.industry-card:hover::before{
-    transform:scaleX(1);
-}
-
-.industry-icon{
-    width:58px;
-    height:58px;
-    margin:0 auto 16px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#eaf8fc;
-    font-size:25px;
-    box-shadow:0 7px 20px rgba(8,127,193,.08);
-    transition:.35s ease;
-}
-
-.industry-card:hover .industry-icon{
-    transform:scale(1.08) rotate(3deg);
-}
-
-.industry-card h3{
-    color:#173b57;
-    font-size:15px;
-    margin-bottom:9px;
-}
-
-.industry-card p{
-    color:#788d9c;
-    font-size:11px;
-    line-height:1.7;
-}
-
-
-/* ===== INDUSTRIES MOBILE ===== */
-
-@media(max-width:800px){
-
-    .industry-grid{
-        grid-template-columns:repeat(2,1fr);
+    .navbar{
         gap:10px;
     }
 
-    .industry-card{
-        padding:22px 10px;
-        border-radius:13px;
-    }
-
-    .industry-icon{
-        width:44px;
-        height:44px;
+    .logo{
         font-size:19px;
-        margin-bottom:11px;
+
+        letter-spacing:1.5px;
     }
 
-    .industry-card h3{
+    .nav-links{
+        gap:11px;
+    }
+
+    .nav-links a{
+        font-size:9px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .tagline{
+        font-size:18px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .card-grid,
+    .work-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+
+        gap:25px;
+    }
+
+    .network-box{
+        padding:40px 20px;
+    }
+
+    .network-globe{
+        width:140px;
+        height:140px;
+
+        font-size:58px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-box{
+        padding:30px 18px;
+    }
+
+    .success-message{
+        padding:16px;
+    }
+
+    .success-box{
+        padding:
+            38px 20px 25px;
+
+        border-radius:20px;
+    }
+
+    .success-icon{
+        width:68px;
+        height:68px;
+
+        font-size:32px;
+    }
+
+    .success-box h2{
+        font-size:23px;
+    }
+
+    .success-box p{
         font-size:11px;
     }
 
-    .industry-card p{
-        font-size:9px;
-        line-height:1.6;
+    .success-connect{
+        font-size:11px;
+
+        padding:11px 14px;
     }
 
 }
 
 @media(max-width:430px){
+
+    .nav-links{
+        gap:8px;
+    }
+
+    .nav-links a{
+        font-size:8px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
 
     .industry-grid{
         gap:8px;
@@ -1101,936 +2580,1311 @@ footer{
     }
 
 }
-/* ===== BUSINESS ENQUIRY POPUP ===== */
 
-.enquiry-modal{
-    position:fixed;
-    inset:0;
-    background:rgba(7,30,45,.72);
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+/* ===== ACCESSIBILITY ===== */
 
-    padding:20px;
-    z-index:9999;
+@media(prefers-reduced-motion:reduce){
 
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
 
-    transition:
-        opacity .35s ease,
-        visibility .35s ease;
-}
+        animation-iteration-count:1 !important;
 
-.enquiry-modal.active{
-    opacity:1;
-    visibility:visible;
-    pointer-events:auto;
-}
+        transition-duration:.01ms !important;
 
-.enquiry-box{
-    width:100%;
-    max-width:650px;
-    max-height:90vh;
-
-    overflow-y:auto;
-
-    background:#ffffff;
-    border-radius:24px;
-
-    padding:38px;
-
-    position:relative;
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.25);
-
-    transform:translateY(30px) scale(.96);
-
-    transition:
-        transform .45s cubic-bezier(.22,1,.36,1);
-}
-
-.enquiry-modal.active .enquiry-box{
-    transform:translateY(0) scale(1);
-}
-
-/* CLOSE BUTTON */
-
-.enquiry-close{
-    position:absolute;
-    top:15px;
-    right:18px;
-
-    width:38px;
-    height:38px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#f1f7f9;
-    color:#496574;
-
-    font-size:25px;
-    line-height:1;
-
-    cursor:pointer;
-
-    transition:.3s ease;
-}
-
-.enquiry-close:hover{
-    background:#e5f3f7;
-    color:#087fc1;
-    transform:rotate(90deg);
-}
-
-/* HEADER */
-
-.enquiry-header{
-    text-align:center;
-    margin-bottom:28px;
-}
-
-.enquiry-icon{
-    width:62px;
-    height:62px;
-
-    margin:0 auto 15px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:linear-gradient(
-        135deg,
-        #e8f7fc,
-        #eaf8ef
-    );
-
-    font-size:28px;
-
-    box-shadow:
-        0 8px 25px rgba(8,127,193,.12);
-}
-
-.enquiry-header h2{
-    color:#123a56;
-    font-size:26px;
-    margin-bottom:8px;
-}
-
-.enquiry-header p{
-    max-width:480px;
-    margin:auto;
-
-    color:#718696;
-    font-size:12px;
-    line-height:1.7;
-}
-
-/* FORM */
-
-#enquiryForm{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
-
-.form-group{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-}
-
-.form-group label{
-    color:#173b57;
-    font-size:12px;
-    font-weight:600;
-}
-
-.form-group input,
-.form-group textarea{
-    width:100%;
-
-    padding:13px 14px;
-
-    border:1px solid #dcebef;
-    border-radius:10px;
-
-    background:#f9fcfd;
-
-    color:#173b57;
-
-    font-family:inherit;
-    font-size:12px;
-
-    outline:none;
-
-    transition:
-        border-color .3s ease,
-        box-shadow .3s ease,
-        background .3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus{
-    border-color:#087fc1;
-    background:#ffffff;
-
-    box-shadow:
-        0 0 0 3px rgba(8,127,193,.08);
-}
-
-.form-group textarea{
-    min-height:90px;
-    resize:vertical;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder{
-    color:#9aabb5;
-}
-
-/* TWO COLUMN FORM */
-
-.form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-/* SUBMIT BUTTON */
-
-.enquiry-submit{
-    width:100%;
-    margin-top:5px;
-
-    border:none;
-    cursor:pointer;
-
-    font-family:inherit;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-    .enquiry-modal{
-        padding:12px;
-    }
-
-    .enquiry-box{
-        max-height:92vh;
-        padding:30px 18px 22px;
-        border-radius:19px;
-    }
-
-    .enquiry-header h2{
-        font-size:21px;
-    }
-
-    .enquiry-header p{
-        font-size:11px;
-    }
-
-    .form-row{
-        grid-template-columns:1fr;
-        gap:16px;
-    }
-
-    .form-group input,
-    .form-group textarea{
-        font-size:11px;
-        padding:12px;
-    }
-
-    .enquiry-close{
-        width:34px;
-        height:34px;
-        font-size:22px;
-        top:10px;
-        right:10px;
+        scroll-behavior:auto !important;
     }
 
 }
+
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
+<!-- ===== HEADER ===== -->
 
-<div class="navbar">
+<header class="header">
 
-<a href="#home" class="logo">
-RITU<span>V</span>AYA
-</a>
+    <div class="container navbar">
 
-<nav class="nav">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#process">Process</a>
-<a href="#contact">Contact</a>
-</nav>
+        <a href="#home" class="logo">
+            RITU<span>VAYA</span>
+        </a>
 
-</div>
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 
 <section class="hero" id="home">
 
-<div class="circle circle-one"></div>
-<div class="circle circle-two"></div>
-<div class="circle circle-three"></div>
+    <div class="hero-orbs">
 
-<div class="hero-content">
+        <div class="circle-one"></div>
 
-<div class="badge">
-🌍 GLOBAL BUSINESS CONNECTIONS
-</div>
+        <div class="circle-two"></div>
 
-<h1>
-RITU<span>V</span>AYA
-</h1>
+        <div class="circle-three"></div>
 
-<div class="tagline">
-Connecting Possibilities Worldwide. 🌍
-</div>
+    </div>
 
-<p>
-We connect businesses with manufacturers, suppliers,
-service providers, business partners and opportunities
-across India and international markets.
-</p>
+    <div class="hero-globe">
+        🌐
+    </div>
 
-<div class="hero-buttons">
+    <div class="container hero-content">
 
-<a
-<button
-    type="button"
-    class="btn btn-primary"
-    onclick="openEnquiry()">
-    Start a Business Enquiry
-</button>
-</a>
+        <div class="badge">
+            🌍 GLOBAL BUSINESS CONNECTIONS
+        </div>
 
-<a href="#services" class="btn btn-outline">
-Explore Services
-</a>
+        <h1>
+            RITU<span>VAYA</span>
+        </h1>
 
-</div>
+        <div class="tagline">
+            Connecting Possibilities Worldwide.
+        </div>
 
-</div>
+        <p>
+            Connecting businesses with the right products,
+            suppliers, services and opportunities.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#contact"
+                class="btn btn-primary"
+                onclick="openEnquiry()"
+            >
+                Start a Business Enquiry →
+            </a>
+
+            <a
+                href="#services"
+                class="btn btn-outline"
+            >
+                Explore Services
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ===== ABOUT ===== -->
 
 <section class="about" id="about">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
-Who We Are
-</h2>
+        <h2 class="section-title hidden">
+            Who We Are
+        </h2>
 
-<p class="section-subtitle">
-Building meaningful connections between businesses,
-products, services and opportunities.
-</p>
+        <p class="section-subtitle hidden">
+            Connecting businesses with the right
+            opportunities across markets.
+        </p>
 
-<div class="about-content">
+        <div class="about-grid">
 
-<h3>
-RITUVAYA — Connecting Businesses Worldwide
-</h3>
+            <div class="about-content hidden">
 
-<p>
-RITUVAYA is a business connection and sourcing platform
-focused on helping companies find suitable manufacturers,
-suppliers, service providers, business partners and
-commercial opportunities.
-</p>
+                <span class="small-label">
+                    ABOUT RITUVAYA
+                </span>
 
-<p>
-Our approach is simple: understand the requirement,
-research suitable connections and help businesses
-move towards the right opportunity.
-</p>
+                <h3>
+                    Building Connections.
+                    Creating Opportunities.
+                </h3>
 
-<div class="principle">
-Right Requirement → Right Connection → Right Opportunity
-</div>
+                <p>
+                    RITUVAYA is a business connection and
+                    sourcing platform focused on connecting
+                    companies with the right manufacturers,
+                    suppliers, service providers, business
+                    partners and opportunities across India
+                    and international markets.
+                </p>
 
-</div>
+                <p>
+                    We help businesses discover suitable
+                    connections through requirement-based
+                    sourcing, supplier matching and B2B
+                    business opportunities.
+                </p>
 
-</div>
-
-</section>
+            </div>
 
 
-<!-- SERVICES -->
+            <div class="about-card hidden">
 
-<section id="services">
+                <div class="about-card-icon">
+                    🌍
+                </div>
 
-<div class="container">
+                <h3>
+                    Our Approach
+                </h3>
 
-<h2 class="section-title">
-What We Do
-</h2>
+                <p>
+                    We understand the requirement first,
+                    research suitable connections and help
+                    businesses connect with the right partner.
+                </p>
 
-<p class="section-subtitle">
-Practical business connection and sourcing solutions
-for companies across different markets.
-</p>
+                <div class="mini-flow">
 
-<div class="cards">
+                    <span>Requirement</span>
 
-<div class="card">
-<div class="icon">🌍</div>
-<h3>Global Sourcing</h3>
-<p>
-Find suitable products and suppliers across
-India and international markets.
-</p>
-</div>
+                    <b>→</b>
 
-<div class="card">
-<div class="icon">🏭</div>
-<h3>Manufacturer Connections</h3>
-<p>
-Connect with manufacturers suitable for
-specific business requirements.
-</p>
-</div>
+                    <span>Research</span>
 
-<div class="card">
-<div class="icon">💼</div>
-<h3>B2B Opportunities</h3>
-<p>
-Discover relevant commercial opportunities,
-partnerships and connections.
-</p>
-</div>
+                    <b>→</b>
 
-<div class="card">
-<div class="icon">⚙️</div>
-<h3>Technical Services</h3>
-<p>
-Connect businesses with technical and
-professional service providers.
-</p>
-</div>
+                    <span>Connection</span>
 
-<div class="card">
-<div class="icon">🔎</div>
-<h3>Supplier Matching</h3>
-<p>
-Requirement-based research to identify
-potential suppliers and partners.
-</p>
-</div>
+                </div>
 
-<div class="card">
-<div class="icon">🤝</div>
-<h3>Business Connections</h3>
-<p>
-Create meaningful business relationships
-for future growth.
-</p>
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- WHO WE WORK WITH -->
+<!-- ===== SERVICES ===== -->
 
-<section class="about">
+<section class="services" id="services">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
-Who We Work With
-</h2>
+        <h2 class="section-title hidden">
+            What We Do
+        </h2>
 
-<p class="section-subtitle">
-Connecting different types of businesses under one network.
-</p>
+        <p class="section-subtitle hidden">
+            Business connections and sourcing solutions
+            designed around your requirements.
+        </p>
 
-<div class="cards">
+        <div class="card-grid">
 
-<div class="card">
-<div class="icon">👥</div>
-<h3>Buyers & Businesses</h3>
-<p>
-Companies searching for products,
-suppliers and services.
-</p>
-</div>
 
-<div class="card">
-<div class="icon">🏭</div>
-<h3>Manufacturers</h3>
-<p>
-Manufacturers looking for relevant
-business requirements.
-</p>
-</div>
+            <div class="card hidden">
 
-<div class="card">
-<div class="icon">📦</div>
-<h3>Suppliers & Distributors</h3>
-<p>
-Suppliers seeking new business
-connections and opportunities.
-</p>
-</div>
+                <div class="card-icon">
+                    🌍
+                </div>
 
-<div class="card">
-<div class="icon">🛠️</div>
-<h3>Service Providers</h3>
-<p>
-Technical and professional service
-providers across industries.
-</p>
-</div>
+                <h3>
+                    Global & Domestic Sourcing
+                </h3>
 
-<div class="card">
-<div class="icon">🌐</div>
-<h3>International Companies</h3>
-<p>
-Companies exploring opportunities
-across international markets.
-</p>
-</div>
+                <p>
+                    Find suitable products and suppliers
+                    across India and international markets.
+                </p>
 
-<div class="card">
-<div class="icon">🤝</div>
-<h3>Business Partners</h3>
-<p>
-Businesses looking for strategic
-partnerships and collaboration.
-</p>
-</div>
+            </div>
 
-</div>
 
-</div>
+            <div class="card hidden">
+
+                <div class="card-icon">
+                    🏭
+                </div>
+
+                <h3>
+                    Manufacturer & Supplier Connections
+                </h3>
+
+                <p>
+                    Connect with suitable manufacturers,
+                    suppliers and distributors.
+                </p>
+
+            </div>
+
+
+            <div class="card hidden">
+
+                <div class="card-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    B2B Business Opportunities
+                </h3>
+
+                <p>
+                    Discover potential business partners,
+                    buyers and commercial opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="card hidden">
+
+                <div class="card-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Technical & Professional Services
+                </h3>
+
+                <p>
+                    Connect businesses with suitable
+                    technical and professional service providers.
+                </p>
+
+            </div>
+
+
+            <div class="card hidden">
+
+                <div class="card-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Requirement-Based Matching
+                </h3>
+
+                <p>
+                    We identify suitable connections based
+                    on your specific business requirements.
+                </p>
+
+            </div>
+
+
+            <div class="card hidden">
+
+                <div class="card-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Business Partner Identification
+                </h3>
+
+                <p>
+                    Find potential business partners for
+                    collaboration and growth.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===== WHO WE WORK WITH ===== -->
+
+<section class="work-with">
+
+    <div class="container">
+
+        <h2 class="section-title hidden">
+            Who We Work With
+        </h2>
+
+        <p class="section-subtitle hidden">
+            Building valuable connections between businesses,
+            suppliers, service providers and partners.
+        </p>
+
+        <div class="work-grid">
+
+
+            <div class="work-card hidden">
+
+                <div class="work-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Buyers & Businesses
+                </h3>
+
+                <p>
+                    Businesses looking for products,
+                    suppliers, services or opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="work-card hidden">
+
+                <div class="work-icon">
+                    🏭
+                </div>
+
+                <h3>
+                    Manufacturers
+                </h3>
+
+                <p>
+                    Manufacturers looking to reach
+                    new buyers and business opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="work-card hidden">
+
+                <div class="work-icon">
+                    📦
+                </div>
+
+                <h3>
+                    Suppliers & Distributors
+                </h3>
+
+                <p>
+                    Suppliers and distributors looking
+                    to expand their business network.
+                </p>
+
+            </div>
+
+
+            <div class="work-card hidden">
+
+                <div class="work-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Service Providers
+                </h3>
+
+                <p>
+                    Technical and professional experts
+                    offering business services.
+                </p>
+
+            </div>
+
+
+            <div class="work-card hidden">
+
+                <div class="work-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    International Businesses
+                </h3>
+
+                <p>
+                    Companies exploring Indian and
+                    international business opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="work-card hidden">
+
+                <div class="work-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Business Partners
+                </h3>
+
+                <p>
+                    Businesses looking for reliable
+                    partners and collaboration opportunities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- PROCESS -->
+<!-- ===== HOW RITUVAYA WORKS ===== -->
 
-<section class="process" id="process">
+<section class="process">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
-How RITUVAYA Works
-</h2>
+        <h2 class="section-title hidden">
+            How RITUVAYA Works
+        </h2>
 
-<p class="section-subtitle">
-A simple process designed to turn requirements
-into meaningful business connections.
-</p>
+        <p class="section-subtitle hidden">
+            A simple requirement-to-connection process.
+        </p>
 
-<div class="steps">
+        <div class="process-grid">
 
-<div class="step">
-<div class="number">1</div>
-<h3>Share Requirement</h3>
-<p>Tell us what you need.</p>
-</div>
 
-<div class="step">
-<div class="number">2</div>
-<h3>Understand</h3>
-<p>We understand the requirement.</p>
-</div>
+            <div class="process-step hidden">
 
-<div class="step">
-<div class="number">3</div>
-<h3>Research</h3>
-<p>We identify suitable connections.</p>
-</div>
+                <div class="step-number">
+                    01
+                </div>
 
-<div class="step">
-<div class="number">4</div>
-<h3>Connect</h3>
-<p>Relevant businesses are connected.</p>
-</div>
+                <div class="step-icon">
+                    📝
+                </div>
 
-<div class="step">
-<div class="number">5</div>
-<h3>Opportunity</h3>
-<p>Connections can grow into opportunities.</p>
-</div>
+                <h3>
+                    Share Requirement
+                </h3>
 
-</div>
+                <p>
+                    Tell us what product, supplier,
+                    service or business connection you need.
+                </p>
 
-</div>
+            </div>
+
+
+            <div class="process-step hidden">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Understand Requirement
+                </h3>
+
+                <p>
+                    We understand your requirement,
+                    specifications and business needs.
+                </p>
+
+            </div>
+
+
+            <div class="process-step hidden">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Find Suitable Connections
+                </h3>
+
+                <p>
+                    We research and identify suitable
+                    manufacturers, suppliers or service providers.
+                </p>
+
+            </div>
+
+
+            <div class="process-step hidden">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="step-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Connect Businesses
+                </h3>
+
+                <p>
+                    We help create the right business
+                    connection between both sides.
+                </p>
+
+            </div>
+
+
+            <div class="process-step hidden">
+
+                <div class="step-number">
+                    05
+                </div>
+
+                <div class="step-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Support the Process
+                </h3>
+
+                <p>
+                    We support communication and follow-up
+                    wherever required.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- WHY CHOOSE -->
+<!-- ===== WHY CHOOSE RITUVAYA ===== -->
 
 <section class="why">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
-Why Choose RITUVAYA?
-</h2>
+        <h2 class="section-title hidden">
+            Why Choose RITUVAYA?
+        </h2>
 
-<p class="section-subtitle">
-Focused on creating useful and meaningful business connections.
-</p>
+        <p class="section-subtitle hidden">
+            Focused on finding the right connection,
+            not simply the nearest option.
+        </p>
 
-<div class="why-grid">
+        <div class="why-grid">
 
-<div class="why-card">
-<div class="icon">🌍</div>
-<h3>Global Reach</h3>
-<p>
-Connections across India and international markets.
-</p>
-</div>
 
-<div class="why-card">
-<div class="icon">🎯</div>
-<h3>Requirement Focused</h3>
-<p>
-We begin by understanding the actual requirement.
-</p>
-</div>
+            <div class="why-card hidden">
 
-<div class="why-card">
-<div class="icon">🤝</div>
-<h3>B2B Focus</h3>
-<p>
-Built around business-to-business relationships.
-</p>
-</div>
+                <div class="why-icon">
+                    🎯
+                </div>
 
-<div class="why-card">
-<div class="icon">📈</div>
-<h3>Long-Term Vision</h3>
-<p>
-Focused on sustainable business opportunities.
-</p>
-</div>
+                <h3>
+                    Requirement Focused
+                </h3>
 
-</div>
+                <p>
+                    We begin by understanding your exact
+                    requirement and business objective.
+                </p>
 
-</div>
+            </div>
+
+
+            <div class="why-card hidden">
+
+                <div class="why-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    India & Global Reach
+                </h3>
+
+                <p>
+                    We explore suitable business connections
+                    across India and international markets.
+                </p>
+
+            </div>
+
+
+            <div class="why-card hidden">
+
+                <div class="why-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Research Based
+                </h3>
+
+                <p>
+                    We research businesses and potential
+                    connections based on your needs.
+                </p>
+
+            </div>
+
+
+            <div class="why-card hidden">
+
+                <div class="why-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Business Connections
+                </h3>
+
+                <p>
+                    Our focus is creating meaningful
+                    connections between the right businesses.
+                </p>
+
+            </div>
+
+
+            <div class="why-card hidden">
+
+                <div class="why-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Simple Process
+                </h3>
+
+                <p>
+                    Share your requirement and let
+                    RITUVAYA handle the connection process.
+                </p>
+
+            </div>
+
+
+            <div class="why-card hidden">
+
+                <div class="why-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Growth Oriented
+                </h3>
+
+                <p>
+                    We aim to create long-term business
+                    relationships and growth opportunities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
-
-<!-- SUPPLIER MATCHING -->
+<!-- ===== SUPPLIER MATCHING ===== -->
 
 <section class="matching">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
-Find The Right Business Connection
-</h2>
+        <h2 class="section-title hidden">
+            Find The Right Business Connection
+        </h2>
 
-<p class="section-subtitle">
-Tell us what you are looking for and RITUVAYA will help
-identify suitable suppliers, manufacturers or service providers.
-</p>
+        <p class="section-subtitle hidden">
+            Tell us what you are looking for and RITUVAYA
+            will help identify suitable suppliers,
+            manufacturers or service providers.
+        </p>
 
-<div class="matching-box">
+        <div class="matching-box hidden">
 
-<div class="matching-icon">
-🔎
-</div>
+            <div class="matching-icon">
+                🔎
+            </div>
 
-<h3>
-Requirement-Based Supplier Matching
-</h3>
+            <h3>
+                Requirement-Based Supplier Matching
+            </h3>
 
-<p>
-Looking for a specific product, manufacturer, supplier
-or technical service? Share your requirement with us.
-We research suitable business connections based on
-your needs.
-</p>
+            <p>
+                Looking for a specific product, manufacturer,
+                supplier or technical service? Share your
+                requirement with us. We research suitable
+                business connections based on your needs.
+            </p>
 
-<div class="matching-points">
+            <div class="matching-points">
 
-<div>
-🌍 <strong>Market Research</strong>
-<span>India & International Markets</span>
-</div>
+                <div>
 
-<div>
-🏭 <strong>Supplier Identification</strong>
-<span>Manufacturers & Suppliers</span>
-</div>
+                    🌍
 
-<div>
-🎯 <strong>Requirement Matching</strong>
-<span>Based on your business needs</span>
-</div>
+                    <strong>
+                        Market Research
+                    </strong>
 
-<div>
-🤝 <strong>Business Connection</strong>
-<span>Connect with suitable businesses</span>
-</div>
+                    <span>
+                        India & International Markets
+                    </span>
 
-</div>
+                </div>
 
-<a
-href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
-target="_blank"
-class="btn btn-primary">
-Submit Your Requirement
-</a>
 
-</div>
+                <div>
 
-</div>
+                    🏭
+
+                    <strong>
+                        Supplier Identification
+                    </strong>
+
+                    <span>
+                        Manufacturers & Suppliers
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    🎯
+
+                    <strong>
+                        Requirement Matching
+                    </strong>
+
+                    <span>
+                        Based on your business needs
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    🤝
+
+                    <strong>
+                        Business Connection
+                    </strong>
+
+                    <span>
+                        Connect with suitable businesses
+                    </span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                Submit Your Requirement →
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- INDUSTRIES WE SERVE -->
+
+<!-- ===== INDUSTRIES WE SERVE ===== -->
 
 <section class="industries">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
-Industries We Serve
-</h2>
+        <h2 class="section-title hidden">
+            Industries We Serve
+        </h2>
 
-<p class="section-subtitle">
-Connecting businesses across industries through the right
-products, suppliers, services and opportunities.
-</p>
+        <p class="section-subtitle hidden">
+            Connecting businesses across industries through
+            the right products, suppliers, services
+            and opportunities.
+        </p>
 
-<div class="industry-grid">
+        <div class="industry-grid">
 
-<div class="industry-card">
-<div class="industry-icon">⚡</div>
-<h3>Energy & Power</h3>
-<p>Business connections across the energy and power sector.</p>
-</div>
 
-<div class="industry-card">
-<div class="industry-icon">🏭</div>
-<h3>Manufacturing</h3>
-<p>Manufacturers, suppliers and industrial business connections.</p>
-</div>
+            <div class="industry-card hidden">
 
-<div class="industry-card">
-<div class="industry-icon">☀️</div>
-<h3>Solar & Renewable Energy</h3>
-<p>Connections for renewable energy products and solutions.</p>
-</div>
+                <div class="industry-icon">
+                    ⚡
+                </div>
 
-<div class="industry-card">
-<div class="industry-icon">💻</div>
-<h3>Technology & IT</h3>
-<p>Technology companies, solutions and professional services.</p>
-</div>
+                <h3>
+                    Energy & Power
+                </h3>
 
-<div class="industry-card">
-<div class="industry-icon">⚙️</div>
-<h3>Engineering & Industrial</h3>
-<p>Engineering products, equipment and technical services.</p>
-</div>
+                <p>
+                    Business connections across the energy
+                    and power sector.
+                </p>
 
-<div class="industry-card">
-<div class="industry-icon">📦</div>
-<h3>Trading & Distribution</h3>
-<p>Suppliers, distributors and commercial opportunities.</p>
-</div>
+            </div>
 
-<div class="industry-card">
-<div class="industry-icon">🏗️</div>
-<h3>Infrastructure & Construction</h3>
-<p>Business connections across infrastructure and construction.</p>
-</div>
 
-<div class="industry-card">
-<div class="industry-icon">🌐</div>
-<h3>Other Industries</h3>
-<p>Exploring opportunities across diverse business sectors.</p>
-</div>
+            <div class="industry-card hidden">
 
-</div>
+                <div class="industry-icon">
+                    🏭
+                </div>
 
-</div>
+                <h3>
+                    Manufacturing
+                </h3>
+
+                <p>
+                    Manufacturers, suppliers and industrial
+                    business connections.
+                </p>
+
+            </div>
+
+
+            <div class="industry-card hidden">
+
+                <div class="industry-icon">
+                    ☀️
+                </div>
+
+                <h3>
+                    Solar & Renewable Energy
+                </h3>
+
+                <p>
+                    Connections for renewable energy
+                    products and solutions.
+                </p>
+
+            </div>
+
+
+            <div class="industry-card hidden">
+
+                <div class="industry-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Technology & IT
+                </h3>
+
+                <p>
+                    Technology companies, solutions
+                    and professional services.
+                </p>
+
+            </div>
+
+
+            <div class="industry-card hidden">
+
+                <div class="industry-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Engineering & Industrial
+                </h3>
+
+                <p>
+                    Engineering products, equipment
+                    and technical services.
+                </p>
+
+            </div>
+
+
+            <div class="industry-card hidden">
+
+                <div class="industry-icon">
+                    📦
+                </div>
+
+                <h3>
+                    Trading & Distribution
+                </h3>
+
+                <p>
+                    Suppliers, distributors and
+                    commercial opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="industry-card hidden">
+
+                <div class="industry-icon">
+                    🏗️
+                </div>
+
+                <h3>
+                    Infrastructure & Construction
+                </h3>
+
+                <p>
+                    Business connections across
+                    infrastructure and construction.
+                </p>
+
+            </div>
+
+
+            <div class="industry-card hidden">
+
+                <div class="industry-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Other Industries
+                </h3>
+
+                <p>
+                    Exploring opportunities across
+                    diverse business sectors.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- GLOBAL NETWORK -->
-<!-- GLOBAL NETWORK -->
+<!-- ===== GLOBAL NETWORK ===== -->
 
-<section class="global">
+<section class="network">
+
+    <div class="container">
+
+        <div class="network-box hidden">
+
+            <div class="network-content">
+
+                <span class="small-label">
+                    GLOBAL VISION
+                </span>
+
+                <h2>
+                    Connecting Businesses
+                    Beyond Borders.
+                </h2>
+
+                <p>
+                    RITUVAYA aims to build a trusted global
+                    business network where companies can
+                    discover products, suppliers, services,
+                    partners and opportunities across borders.
+                </p>
+
+                <p>
+                    From local requirements to international
+                    sourcing, our goal is to make business
+                    connections simpler, faster and more
+                    accessible.
+                </p>
+
+            </div>
 
 
-<div class="container">
+            <div class="network-globe">
+                🌐
+            </div>
 
-<h2>
-Connecting India With The World 🌍
-</h2>
+        </div>
 
-<p>
-RITUVAYA aims to make it easier for businesses to
-discover products, suppliers, services, partners and
-opportunities across borders.
-</p>
+    </div>
 
-<div class="global-globe"></div>
+</section>
+<!-- ===== MISSION & VISION ===== -->
 
-</div>
+<section class="mission-vision">
+
+    <div class="container">
+
+        <h2 class="section-title hidden">
+            Mission & Vision
+        </h2>
+
+        <p class="section-subtitle hidden">
+            Building a simpler and more connected
+            business ecosystem.
+        </p>
+
+        <div class="mv-grid">
+
+
+            <div class="mv-card hidden">
+
+                <div class="mv-icon">
+                    🎯
+                </div>
+
+                <span>
+                    OUR MISSION
+                </span>
+
+                <h3>
+                    Right Connection.
+                    Right Opportunity.
+                </h3>
+
+                <p>
+                    To make business connections simpler by
+                    helping the right businesses find the
+                    right opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="mv-card hidden">
+
+                <div class="mv-icon">
+                    🚀
+                </div>
+
+                <span>
+                    OUR VISION
+                </span>
+
+                <h3>
+                    Building a Trusted
+                    Global Platform.
+                </h3>
+
+                <p>
+                    To build RITUVAYA into a trusted global
+                    business connection platform where
+                    companies can discover products, suppliers,
+                    services, partners and opportunities
+                    across borders.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- MISSION -->
+<!-- ===== PRINCIPLE ===== -->
 
-<section class="mission">
+<section class="principle">
 
-<div class="container">
+    <div class="container">
 
-<div class="mv">
+        <span class="small-label">
+            OUR PRINCIPLE
+        </span>
 
-<div class="mv-card">
+        <h2>
+            Right Requirement
+            →
+            Right Connection
+            →
+            Right Opportunity
+        </h2>
 
-<h3>
-Our Mission
-</h3>
+        <p>
+            Connecting Possibilities Worldwide. 🌍
+        </p>
 
-<p>
-To make business connections simpler by helping
-the right businesses find the right products,
-suppliers, service providers, partners and
-opportunities.
-</p>
-
-</div>
-
-<div class="mv-card">
-
-<h3>
-Our Vision
-</h3>
-
-<p>
-To build RITUVAYA into a trusted global business
-connection platform where companies can discover
-and connect with opportunities across borders.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- ===== CTA ===== -->
 
 <section class="cta" id="contact">
 
-<div class="container">
+    <div class="container">
 
-<h2>
-Let's Connect 🌍
-</h2>
+        <div class="cta-box hidden">
 
-<p>
-Have a business requirement?
-Let's explore the right connection for you.
-</p>
+            <span class="small-label">
+                LET'S CONNECT
+            </span>
 
-<a
-href="https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/viewform?usp=publish-editor"
-target="_blank"
-class="btn">
-Submit Business Enquiry
-</a>
+            <h2>
+                Have a Business Requirement?
+            </h2>
 
-<div class="email">
-rituvaya.connect@gmail.com
-</div>
+            <p>
+                Tell us what you are looking for.
+                RITUVAYA will help you explore suitable
+                suppliers, manufacturers, service providers
+                or business opportunities.
+            </p>
 
-</div>
+            <button
+                type="button"
+                class="btn btn-primary"
+                onclick="openEnquiry()"
+            >
+                Submit Business Enquiry →
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 
 <footer>
 
-<div class="footer-logo">
-RITU<span>V</span>AYA
-</div>
+    <div class="container">
 
-<div class="footer-line">
-BUSINESS CONNECTIONS & SOURCING
-</div>
+        <div class="footer-grid">
 
-<div class="footer-tagline">
-Connecting Possibilities Worldwide. 🌍
-</div>
 
-<div class="copyright">
-© 2026 RITUVAYA. All Rights Reserved.
-</div>
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    RITU<span>VAYA</span>
+                </div>
+
+                <p>
+                    Connecting businesses with the right
+                    products, suppliers, services and
+                    opportunities across India and
+                    international markets.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Connect With Us
+                </h3>
+
+                <a
+                    href="mailto:rituvaya.connect@gmail.com"
+                >
+                    Email RITUVAYA
+                </a>
+
+                <a
+                    href="https://rituvaya.github.io/rituvaya/"
+                    target="_blank"
+                >
+                    Visit Website
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/company/rituvaya/"
+                    target="_blank"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 RITUVAYA. All Rights Reserved.
+            </div>
+
+            <div class="footer-tagline">
+                Connecting Possibilities Worldwide. 🌍
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
-<script>
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold: 0.15
-});
-
-document.querySelectorAll("section, .card").forEach((el) => {
-    el.classList.add("hidden");
-    observer.observe(el);
-});
-</script>
 <!-- ===== BUSINESS ENQUIRY POPUP ===== -->
 
 <div id="enquiryModal" class="enquiry-modal">
 
     <div class="enquiry-box">
 
-        <button class="enquiry-close" onclick="closeEnquiry()">
+        <button
+            type="button"
+            class="enquiry-close"
+            onclick="closeEnquiry()"
+        >
             ×
         </button>
+
 
         <div class="enquiry-header">
 
@@ -2049,92 +3903,158 @@ document.querySelectorAll("section, .card").forEach((el) => {
 
         </div>
 
+
         <form id="enquiryForm">
 
+
             <div class="form-group">
-                <label>Full Name</label>
+
+                <label>
+                    Full Name
+                </label>
+
                 <input
                     type="text"
                     placeholder="Enter your name"
                     required
                 >
+
             </div>
 
+
             <div class="form-group">
-                <label>Company Name</label>
+
+                <label>
+                    Company Name
+                </label>
+
                 <input
                     type="text"
                     placeholder="Enter company name"
                     required
                 >
+
             </div>
+
 
             <div class="form-row">
 
                 <div class="form-group">
-                    <label>Country</label>
+
+                    <label>
+                        Country
+                    </label>
+
                     <input
                         type="text"
                         placeholder="Country"
                         required
                     >
+
                 </div>
 
+
                 <div class="form-group">
-                    <label>Business Email</label>
+
+                    <label>
+                        Business Email
+                    </label>
+
                     <input
                         type="email"
                         placeholder="Email address"
                         required
                     >
+
                 </div>
 
             </div>
 
+
             <div class="form-group">
-                <label>What are you looking for?</label>
+
+                <label>
+                    What are you looking for?
+                </label>
+
                 <textarea
                     placeholder="Describe your requirement..."
                     required
                 ></textarea>
+
             </div>
 
+
             <div class="form-group">
-                <label>Product / Service Details</label>
+
+                <label>
+                    Product / Service Details
+                </label>
+
                 <textarea
-    placeholder="Tell us more about the product or service..."
-    required
-></textarea>
+                    placeholder="Tell us more about the product or service..."
+                    required
+                ></textarea>
+
             </div>
 
+
             <div class="form-group">
-                <label>Quantity / Required Volume</label>
+
+                <label>
+                    Quantity / Required Volume
+                </label>
+
                 <input
-    type="text"
-    placeholder="Example: 100 units / 10 MT"
-    required
->
+                    type="text"
+                    placeholder="Example: 100 units / 10 MT"
+                    required
+                >
+
             </div>
+
+
             <div class="form-group">
-    <label>Phone / WhatsApp Number</label>
-    <input
-    type="tel"
-    placeholder="Enter phone / WhatsApp number"
-    required
->
-                <div class="form-group">
-    <label>Additional Information</label>
-    <textarea
-        placeholder="Any additional information..."
-    ></textarea>
-                </div>
-            <div class="form-group">
-    <label>Delivery Location</label>
-    <input
-        type="text"
-        placeholder="City / Country"
-    >
+
+                <label>
+                    Phone / WhatsApp Number
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="Enter phone / WhatsApp number"
+                    required
+                >
+
             </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Additional Information
+                </label>
+
+                <textarea
+                    placeholder="Any additional information..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Delivery Location
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="City / Country"
+                >
+
+            </div>
+
 
             <button
                 type="submit"
@@ -2143,16 +4063,20 @@ document.querySelectorAll("section, .card").forEach((el) => {
                 Submit Requirement →
             </button>
 
+
         </form>
 
     </div>
 
-<script>
+</div>
+
+
 <!-- ===== PREMIUM SUCCESS MESSAGE ===== -->
 
 <div id="successMessage" class="success-message">
 
     <div class="success-box">
+
 
         <button
             type="button"
@@ -2162,26 +4086,35 @@ document.querySelectorAll("section, .card").forEach((el) => {
             ×
         </button>
 
+
         <div class="success-icon">
             ✓
         </div>
+
 
         <h2>
             Thank You! 🙌
         </h2>
 
+
         <p>
             Your business enquiry has been submitted successfully.
         </p>
+
 
         <div class="success-connect">
             🤝 We will connect with you shortly.
         </div>
 
+
         <span>
             Thank you for choosing RITUVAYA.<br>
-            <strong>Connecting Possibilities Worldwide. 🌍</strong>
+
+            <strong>
+                Connecting Possibilities Worldwide. 🌍
+            </strong>
         </span>
+
 
         <button
             type="button"
@@ -2191,113 +4124,404 @@ document.querySelectorAll("section, .card").forEach((el) => {
             Done ✓
         </button>
 
+
     </div>
 
 </div>
+<script>
+
+/* ===== RITUVAYA JAVASCRIPT ===== */
 
 
-// ===== BUSINESS ENQUIRY POPUP =====
+/* ===== BUSINESS ENQUIRY POPUP ===== */
 
 function openEnquiry(){
-    document.getElementById("enquiryModal").classList.add("active");
+
+    document
+        .getElementById("enquiryModal")
+        .classList.add("active");
+
     document.body.style.overflow = "hidden";
+
 }
+
 
 function closeEnquiry(){
-    document.getElementById("enquiryModal").classList.remove("active");
+
+    document
+        .getElementById("enquiryModal")
+        .classList.remove("active");
+
     document.body.style.overflow = "";
+
 }
 
 
-// ===== GOOGLE FORM SUBMISSION =====
+/* ===== PREMIUM SUCCESS POPUP ===== */
 
-document.getElementById("enquiryForm").addEventListener("submit", function(event){
+function showSuccess(){
 
-    event.preventDefault();
+    document
+        .getElementById("successMessage")
+        .classList.add("active");
 
-    const form = this;
+    document.body.style.overflow = "hidden";
 
-    const inputs = form.querySelectorAll("input");
-    const textareas = form.querySelectorAll("textarea");
+}
 
-    // Hidden iframe
-    let iframe = document.getElementById("googleFormFrame");
 
-    if(!iframe){
+function closeSuccess(){
 
-        iframe = document.createElement("iframe");
+    document
+        .getElementById("successMessage")
+        .classList.remove("active");
 
-        iframe.id = "googleFormFrame";
-        iframe.name = "googleFormFrame";
-        iframe.style.display = "none";
+    document.body.style.overflow = "";
 
-        document.body.appendChild(iframe);
+}
+
+
+/* ===== CLOSE WITH ESCAPE KEY ===== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeEnquiry();
+
+            closeSuccess();
+
+        }
+
     }
+);
 
-    // Create Google Form
-    const googleForm = document.createElement("form");
 
-    googleForm.method = "POST";
+/* ===== CLOSE WHEN CLICKING OUTSIDE ===== */
 
-    googleForm.action =
-    "https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/formResponse";
+document
+    .getElementById("enquiryModal")
+    .addEventListener(
+        "click",
+        function(event){
 
-    googleForm.target = "googleFormFrame";
+            if(
+                event.target === this
+            ){
 
-    const fields = [
+                closeEnquiry();
 
-        ["entry.1111324147", inputs[0].value],
-        ["entry.1652586106", inputs[1].value],
-        ["entry.976028259", inputs[2].value],
-        ["entry.1238825223", inputs[3].value],
+            }
 
-        ["entry.1983571524", inputs[5].value],
-
-        ["entry.475730333", textareas[0].value],
-        ["entry.1498088326", textareas[1].value],
-
-        ["entry.592986264", inputs[4].value],
-
-        ["entry.1834524077", inputs[6].value],
-
-        ["entry.584578148", textareas[2].value]
-
-    ];
-
-    fields.forEach(function(field){
-
-        const input = document.createElement("input");
-
-        input.type = "hidden";
-        input.name = field[0];
-        input.value = field[1];
-
-        googleForm.appendChild(input);
-
-    });
-
-    document.body.appendChild(googleForm);
-
-    googleForm.submit();
-
-    // Reset popup form
-    form.reset();
-
-    closeEnquiry();
-
-    alert(
-        "Thank you! Your business enquiry has been submitted successfully. ✓"
+        }
     );
 
-    setTimeout(function(){
 
-        googleForm.remove();
+document
+    .getElementById("successMessage")
+    .addEventListener(
+        "click",
+        function(event){
 
-    }, 2000);
+            if(
+                event.target === this
+            ){
 
-});
+                closeSuccess();
+
+            }
+
+        }
+    );
+
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
+
+const hiddenElements =
+    document.querySelectorAll(".hidden");
+
+
+const observer =
+    new IntersectionObserver(
+
+        function(entries){
+
+            entries.forEach(
+                function(entry){
+
+                    if(entry.isIntersecting){
+
+                        entry.target
+                            .classList
+                            .add("show");
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold:0.12
+        }
+
+    );
+
+
+hiddenElements.forEach(
+    function(element){
+
+        observer.observe(element);
+
+    }
+);
+/* ===== GOOGLE FORM SUBMISSION ===== */
+
+document
+    .getElementById("enquiryForm")
+    .addEventListener(
+        "submit",
+        function(event){
+
+            event.preventDefault();
+
+            const form = this;
+
+            const inputs =
+                form.querySelectorAll("input");
+
+            const textareas =
+                form.querySelectorAll("textarea");
+
+
+            /* ===== HIDDEN GOOGLE FORM IFRAME ===== */
+
+            let iframe =
+                document.getElementById(
+                    "googleFormFrame"
+                );
+
+
+            if(!iframe){
+
+                iframe =
+                    document.createElement(
+                        "iframe"
+                    );
+
+                iframe.id =
+                    "googleFormFrame";
+
+                iframe.name =
+                    "googleFormFrame";
+
+                iframe.style.display =
+                    "none";
+
+                document.body.appendChild(
+                    iframe
+                );
+
+            }
+
+
+            /* ===== CREATE GOOGLE FORM ===== */
+
+            const googleForm =
+                document.createElement(
+                    "form"
+                );
+
+            googleForm.method =
+                "POST";
+
+            googleForm.action =
+                "https://docs.google.com/forms/d/e/1FAIpQLSc7aV0sQeZ9tOl4Qwa58D6LgmTtIPULy66Srj0LVatqnlH00g/formResponse";
+
+            googleForm.target =
+                "googleFormFrame";
+
+
+            /* ===== FIELD MAPPING ===== */
+
+            const fields = [
+
+                [
+                    "entry.1111324147",
+                    inputs[0].value
+                ],
+
+                [
+                    "entry.1652586106",
+                    inputs[1].value
+                ],
+
+                [
+                    "entry.976028259",
+                    inputs[2].value
+                ],
+
+                [
+                    "entry.1238825223",
+                    inputs[3].value
+                ],
+
+                [
+                    "entry.1983571524",
+                    inputs[5].value
+                ],
+
+                [
+                    "entry.475730333",
+                    textareas[0].value
+                ],
+
+                [
+                    "entry.1498088326",
+                    textareas[1].value
+                ],
+
+                [
+                    "entry.592986264",
+                    inputs[4].value
+                ],
+
+                [
+                    "entry.1834524077",
+                    inputs[6].value
+                ],
+
+                [
+                    "entry.584578148",
+                    textareas[2].value
+                ]
+
+            ];
+
+
+            /* ===== ADD FIELDS ===== */
+
+            fields.forEach(
+                function(field){
+
+                    const input =
+                        document.createElement(
+                            "input"
+                        );
+
+                    input.type =
+                        "hidden";
+
+                    input.name =
+                        field[0];
+
+                    input.value =
+                        field[1];
+
+                    googleForm.appendChild(
+                        input
+                    );
+
+                }
+            );
+
+
+            /* ===== SUBMIT ===== */
+
+            document.body.appendChild(
+                googleForm
+            );
+
+            googleForm.submit();
+
+
+            /* ===== RESET FORM ===== */
+
+            form.reset();
+
+
+            /* ===== CLOSE ENQUIRY ===== */
+
+            closeEnquiry();
+
+
+            /* ===== SHOW SUCCESS ===== */
+
+            showSuccess();
+
+
+            /* ===== REMOVE TEMP FORM ===== */
+
+            setTimeout(
+                function(){
+
+                    googleForm.remove();
+
+                },
+                2000
+            );
+
+        }
+    );
+    /* ===== PAGE READY ===== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        document.body.classList.add(
+            "page-loaded"
+        );
+
+    }
+);
+
+
+/* ===== PREVENT SUCCESS POPUP ON PAGE LOAD ===== */
+
+document
+    .getElementById("successMessage")
+    .classList.remove("active");
+
+
+/* ===== PREVENT ENQUIRY POPUP ON PAGE LOAD ===== */
+
+document
+    .getElementById("enquiryModal")
+    .classList.remove("active");
+
+
+/* ===== CLOSE POPUPS WHEN NAVIGATION CHANGES ===== */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    closeEnquiry();
+
+                    closeSuccess();
+
+                }
+            );
+
+        }
+    );
+
 
 </script>
 
 </body>
+
 </html>
