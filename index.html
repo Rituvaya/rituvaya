@@ -2822,6 +2822,654 @@ footer{
     }
 
 }
+/* ===== PREMIUM HERO ===== */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 85% 45%,#eaf8fc,transparent 32%),
+        radial-gradient(circle at 15% 80%,#eefaf3,transparent 28%),
+        #ffffff;
+}
+
+.hero-content{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+    position:relative;
+    z-index:5;
+}
+
+.hero-left{
+    position:relative;
+    z-index:5;
+}
+
+.hero-left .badge{
+    display:inline-block;
+    margin-bottom:18px;
+}
+
+
+/* ===== HERO EARTH ===== */
+
+.hero-earth{
+    width:440px;
+    height:440px;
+    margin:auto;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:2;
+}
+
+
+/* GLOW */
+
+.earth-glow{
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(8,127,193,.25),
+            rgba(8,127,193,.08) 45%,
+            transparent 70%
+        );
+
+    filter:blur(12px);
+
+    animation:earthGlow 4s ease-in-out infinite;
+}
+
+
+/* EARTH */
+
+.earth{
+    width:285px;
+    height:285px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:5;
+}
+
+
+/* CSS GLOBE */
+
+.earth-surface{
+    width:255px;
+    height:255px;
+
+    border-radius:50%;
+
+    font-size:0;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 35% 28%,
+            rgba(255,255,255,.35),
+            transparent 18%
+        ),
+        radial-gradient(
+            circle at 65% 70%,
+            #43b96b 0 10%,
+            transparent 11%
+        ),
+        radial-gradient(
+            circle at 35% 58%,
+            #43b96b 0 13%,
+            transparent 14%
+        ),
+        radial-gradient(
+            circle at 72% 35%,
+            #43b96b 0 8%,
+            transparent 9%
+        ),
+        linear-gradient(
+            145deg,
+            #20a7e5,
+            #087fc1 45%,
+            #064d78
+        );
+
+    border:3px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        inset -35px -25px 50px rgba(0,0,0,.35),
+        inset 15px 10px 30px rgba(255,255,255,.15),
+        0 0 55px rgba(8,127,193,.30);
+
+    animation:
+        earthRotate 12s linear infinite,
+        earthFloat 5s ease-in-out infinite;
+}
+
+
+/* LONGITUDE LINES */
+
+.earth-surface::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 35px,
+            rgba(255,255,255,.12) 36px,
+            transparent 38px
+        );
+
+    opacity:.7;
+
+    transform:scaleX(.9);
+}
+
+
+/* LATITUDE LINES */
+
+.earth-surface::after{
+    content:"";
+
+    position:absolute;
+
+    left:8%;
+    right:8%;
+    top:32%;
+    height:36%;
+
+    border-top:1px solid rgba(255,255,255,.16);
+    border-bottom:1px solid rgba(255,255,255,.16);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 0 18px rgba(255,255,255,.05),
+        0 0 0 36px rgba(255,255,255,.04);
+}
+
+
+/* ===== ORBITS ===== */
+
+.earth-orbit{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:390px;
+    height:155px;
+
+    border:1px solid rgba(8,127,193,.32);
+
+    border-radius:50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(65deg);
+
+    transform-style:preserve-3d;
+
+    z-index:1;
+}
+
+.orbit-one{
+    animation:orbitOne 9s linear infinite;
+}
+
+.orbit-two{
+    width:350px;
+    height:190px;
+
+    border-color:rgba(67,185,107,.30);
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(68deg)
+        rotateZ(55deg);
+
+    animation:orbitTwo 12s linear infinite reverse;
+}
+
+.orbit-three{
+    width:320px;
+    height:230px;
+
+    border-color:rgba(8,127,193,.22);
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(72deg)
+        rotateZ(-45deg);
+
+    animation:orbitThree 15s linear infinite;
+}
+
+
+/* ===== CONNECTION POINTS ===== */
+
+.connection-point{
+    width:10px;
+    height:10px;
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#43b96b;
+
+    box-shadow:
+        0 0 0 5px rgba(67,185,107,.12),
+        0 0 18px rgba(67,185,107,.7);
+
+    z-index:8;
+
+    animation:pointPulse 2s ease-in-out infinite;
+}
+
+.point-one{
+    top:105px;
+    right:105px;
+}
+
+.point-two{
+    bottom:115px;
+    left:92px;
+
+    animation-delay:.6s;
+}
+
+.point-three{
+    top:210px;
+    right:55px;
+
+    animation-delay:1.2s;
+}
+
+
+/* ===== FLOATING LABELS ===== */
+
+.earth-label{
+    position:absolute;
+
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    padding:9px 13px;
+
+    background:rgba(255,255,255,.88);
+
+    border:1px solid rgba(8,127,193,.12);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 10px 25px rgba(20,90,130,.12);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    color:#173b57;
+
+    font-size:11px;
+    font-weight:600;
+
+    z-index:10;
+
+    white-space:nowrap;
+}
+
+.label-supplier{
+    top:55px;
+    left:15px;
+
+    animation:labelFloatOne 5s ease-in-out infinite;
+}
+
+.label-global{
+    top:130px;
+    right:-5px;
+
+    animation:labelFloatTwo 6s ease-in-out infinite;
+}
+
+.label-service{
+    bottom:90px;
+    left:5px;
+
+    animation:labelFloatThree 5.5s ease-in-out infinite;
+}
+
+.label-opportunity{
+    bottom:35px;
+    right:25px;
+
+    animation:labelFloatFour 6.5s ease-in-out infinite;
+}
+
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes earthRotate{
+
+    from{
+        transform:rotateY(0deg);
+    }
+
+    to{
+        transform:rotateY(360deg);
+    }
+
+}
+
+@keyframes earthFloat{
+
+    0%,100%{
+        margin-top:0;
+    }
+
+    50%{
+        margin-top:-12px;
+    }
+
+}
+
+@keyframes earthGlow{
+
+    0%,100%{
+        transform:scale(.95);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.08);
+        opacity:1;
+    }
+
+}
+
+@keyframes orbitOne{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotateX(65deg)
+            rotateZ(0deg);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotateX(65deg)
+            rotateZ(360deg);
+    }
+
+}
+
+@keyframes orbitTwo{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotateX(68deg)
+            rotateZ(55deg);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotateX(68deg)
+            rotateZ(415deg);
+    }
+
+}
+
+@keyframes orbitThree{
+
+    from{
+        transform:
+            translate(-50%,-50%)
+            rotateX(72deg)
+            rotateZ(-45deg);
+    }
+
+    to{
+        transform:
+            translate(-50%,-50%)
+            rotateX(72deg)
+            rotateZ(315deg);
+    }
+
+}
+
+@keyframes pointPulse{
+
+    0%,100%{
+        transform:scale(.8);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.4);
+        opacity:1;
+    }
+
+}
+
+@keyframes labelFloatOne{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(8px,-10px);
+    }
+
+}
+
+@keyframes labelFloatTwo{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-8px,8px);
+    }
+
+}
+
+@keyframes labelFloatThree{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(7px,-8px);
+    }
+
+}
+
+@keyframes labelFloatFour{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-7px,-8px);
+    }
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:900px){
+
+    .hero{
+        min-height:auto;
+        padding:80px 0 70px;
+    }
+
+    .hero-content{
+        grid-template-columns:1fr;
+        gap:50px;
+        text-align:center;
+    }
+
+    .hero-left{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-earth{
+        width:350px;
+        height:350px;
+    }
+
+    .earth-surface{
+        width:205px;
+        height:205px;
+    }
+
+    .earth{
+        width:235px;
+        height:235px;
+    }
+
+    .earth-glow{
+        width:270px;
+        height:270px;
+    }
+
+    .earth-orbit{
+        width:310px;
+        height:125px;
+    }
+
+    .orbit-two{
+        width:285px;
+        height:155px;
+    }
+
+    .orbit-three{
+        width:260px;
+        height:185px;
+    }
+
+    .earth-label{
+        font-size:9px;
+        padding:7px 10px;
+    }
+
+    .label-supplier{
+        left:0;
+    }
+
+    .label-global{
+        right:0;
+    }
+
+    .label-service{
+        left:0;
+    }
+
+    .label-opportunity{
+        right:0;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .hero-earth{
+        width:300px;
+        height:300px;
+    }
+
+    .earth-surface{
+        width:175px;
+        height:175px;
+    }
+
+    .earth{
+        width:205px;
+        height:205px;
+    }
+
+    .earth-glow{
+        width:225px;
+        height:225px;
+    }
+
+    .earth-orbit{
+        width:270px;
+        height:105px;
+    }
+
+    .orbit-two{
+        width:245px;
+        height:130px;
+    }
+
+    .orbit-three{
+        width:225px;
+        height:160px;
+    }
+
+    .earth-label{
+        font-size:8px;
+        padding:6px 8px;
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media(prefers-reduced-motion:reduce){
+
+    .earth-surface,
+    .earth-glow,
+    .earth-orbit,
+    .connection-point,
+    .earth-label{
+        animation:none !important;
+    }
+
+}
 </style>
 
 </head>
