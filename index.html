@@ -2599,7 +2599,229 @@ footer{
     }
 
 }
+/* ===== WHAT CAN YOU HELP FIND ===== */
 
+.find-section{
+    background:
+    radial-gradient(circle at 10% 20%,#e8f8fc,transparent 30%),
+    radial-gradient(circle at 90% 80%,#eaf8ef,transparent 30%),
+    #ffffff;
+}
+
+.find-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.find-card{
+    background:#ffffff;
+    border:1px solid #e2edf1;
+    border-radius:20px;
+    padding:28px 22px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.find-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:4px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #087fc1,
+        #43b96b
+    );
+
+    transform:scaleX(0);
+    transform-origin:left;
+
+    transition:.35s ease;
+}
+
+.find-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(20,90,130,.12);
+
+    border-color:#cfe5ec;
+}
+
+.find-card:hover::before{
+    transform:scaleX(1);
+}
+
+
+/* VISUAL */
+
+.find-visual{
+    width:90px;
+    height:90px;
+
+    margin:0 auto 20px;
+
+    border-radius:24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:42px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eaf8fc,
+        #eefaf3
+    );
+
+    box-shadow:
+        0 10px 25px rgba(8,127,193,.10);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.find-card:hover .find-visual{
+    transform:
+        translateY(-4px)
+        scale(1.06);
+
+    box-shadow:
+        0 14px 30px rgba(8,127,193,.15);
+}
+
+
+.find-card h3{
+    color:#173b57;
+
+    font-size:17px;
+
+    margin-bottom:10px;
+}
+
+
+.find-card p{
+    color:#788d9c;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    min-height:55px;
+
+    margin-bottom:18px;
+}
+
+
+/* BUTTON */
+
+.find-btn{
+    border:none;
+
+    background:transparent;
+
+    color:#087fc1;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.find-btn:hover{
+    color:#43b96b;
+
+    transform:translateX(4px);
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .find-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .find-card{
+        padding:22px 12px;
+        border-radius:15px;
+    }
+
+    .find-visual{
+        width:62px;
+        height:62px;
+
+        border-radius:17px;
+
+        font-size:29px;
+
+        margin-bottom:14px;
+    }
+
+    .find-card h3{
+        font-size:12px;
+    }
+
+    .find-card p{
+        font-size:9px;
+        line-height:1.6;
+        min-height:auto;
+    }
+
+    .find-btn{
+        font-size:9px;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .find-grid{
+        gap:8px;
+    }
+
+    .find-card{
+        padding:18px 8px;
+    }
+
+    .find-visual{
+        width:54px;
+        height:54px;
+
+        font-size:25px;
+    }
+
+    .find-card h3{
+        font-size:10px;
+    }
+
+    .find-card p{
+        font-size:8px;
+    }
+
+}
 </style>
 
 </head>
